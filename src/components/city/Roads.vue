@@ -19,19 +19,23 @@
       </div>
       <div id="cityData" class="col-lg-6 order-first">
         <h1 class="mt-5 mb-2">Vias</h1>
-        <div class="row pb-4 pt-4 mb-4 border-top border-bottom">
+        <div class="row pb-2 pt-4 mb-4 border-top border-bottom">
           <div class="col-12">
             <h3>Ancho Promedio de las vías (Metros)</h3>
           </div>
+        </div>
+        <div class="row pb-4 mb-4 border-bottom">
           <div class="col-4 pt-2">
             <big-num heading='Pre 1990' number='10.4' units='Metros' color='#ac2341'/>
           </div>
           <div class="col-4 pt-2">
             <big-num heading='1990–2015' number='8.74' units='Metros' color='#da8b40'/>
           </div>
-          <div class="col-12 pt-5">
+        </div>
+        <div class="row pt-2 pb-3 mb-4 border-bottom">
+          <div class="col-12">
             <p>
-              El ancho promedio de las vías en el área de expansión de Portoviejo durante 1985-2017 fue de 8.74 metros, en comparación con 10.4 metros en su área anterior a 1985.
+              El ancho promedio de las vías en el área de expansión de Portoviejo durante 1990-2015 fue de 8.74 metros, en comparación con 10.4 metros en su área anterior a 1985.
             </p>
           </div>
         </div>
@@ -40,19 +44,23 @@
             <canvas id='roads_average_width_bar' class='city-graphic' />
           </div>
         </div>
-        <div class="row pb-4 pt-4 mb-4 border-bottom">
+        <div class="row pb-2 mb-4 border-bottom">
           <div class="col-12">
             <h3>Porcentaje de área edificada ocupado por vías</h3>
           </div>
+        </div>
+        <div class="row pb-4 mb-4 border-bottom">
           <div class="col-4 pt-2">
             <big-num heading='Pre 1990' number='26%' color='#ac2341'/>
           </div>
           <div class="col-4 pt-2">
             <big-num heading='1990–2015' number='27%' color='#da8b40'/>
           </div>
-          <div class="col-12 pt-5">
+        </div>
+        <div class="row pt-2 pb-3 mb-4 border-bottom">
+          <div class="col-12">
             <p>
-              La proporción del área edificada en Portoviejo ocupada por carreteras en el área de expansión 1985-2017 fue del 10%, cifra exactamente igual en comparación al área anterior a 1985.
+              La proporción del área edificada en Portoviejo ocupada por carreteras en el área de expansión 1990-2015 fue de 27%, en comparación con 26% en al área anterior a 1985.
             </p>
           </div>
         </div>
@@ -62,9 +70,11 @@
           </div>
         </div>
         <div class="row border-bottom pb-4 mb-4">
-          <div class="col-12 mb-4">
+          <div class="col-12">
             <h3>Composición del Ancho de las Vías</h3>
           </div>
+        </div>
+        <div class="row pb-4 mb-4 border-bottom">
           <div class="col-12">
             <canvas id='roads_width_stacked_bar' class='city-graphic' />
           </div>
@@ -296,17 +306,6 @@ export default {
 #mapbox {
   height: 100%;
   width: 100%;
-}
-#map-key {
-  background: white;
-  padding: 5px;
-  font-size: 13px;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 190px;
-  z-index: 2;
-  text-align: left;
 }
 
 /*

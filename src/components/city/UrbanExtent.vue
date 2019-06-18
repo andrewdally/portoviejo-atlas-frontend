@@ -211,7 +211,7 @@ export default {
       .addTo(this.map);
     this.setLayers();
     this.loadMapLayers();
-    
+
 
   },
   destroyed() {
@@ -462,17 +462,6 @@ export default {
 #mapbox {
   height: 100%;
   width: 100%;
-}
-#map-key {
-  background: white;
-  padding: 5px;
-  font-size: 13px;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 190px;
-  z-index: 2;
-  text-align: left;
 }
 #cityData {
   background: white;

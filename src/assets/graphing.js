@@ -146,7 +146,7 @@ let charts = function (city) {
       ]
     },
     'arterial_roads': {
-      labels: ['Portoviejo', 'LDC', 'Mundo'],
+      labels: ['Portoviejo', 'PMD', 'Mundo'],
       datasets: [
         {
           label: 'Densidad de las todas Vías',
@@ -157,7 +157,7 @@ let charts = function (city) {
       ]
     },
     'arterial_roads_distance': {
-      labels: ['Portoviejo', 'LDC', 'Mundo'],
+      labels: ['Portoviejo', 'PMD', 'Mundo'],
       datasets: [
         {
           label: 'Ancho',
@@ -174,7 +174,7 @@ let charts = function (city) {
       ]
     },
     'blocks_and_plots_composition_special_stacked': {
-      labels: ['Portoviejo', 'LDC', 'Mundo'],
+      labels: ['Portoviejo', 'PMD', 'Mundo'],
       datasets: [
         {
           suffix: '_atomistic_',
@@ -827,7 +827,7 @@ export const drawForecasts = function(prefix, city) {
           pointBackgroundColor: 'green',
           pointBorderWidth: 1,
           fill: false,
-          label: 'Ciudad promedio',
+          label: 'Tendencia Ciudad',
           data: d2
         },
         {
@@ -841,7 +841,7 @@ export const drawForecasts = function(prefix, city) {
           pointBackgroundColor: 'red',
           pointBorderWidth: 1,
           fill: false,
-          label: 'Promedio de los paises menos desarrollados',
+          label: 'Tendencia Mundo',
           data: d3
         }
       ]

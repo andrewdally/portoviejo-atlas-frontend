@@ -13,9 +13,13 @@
             </label>
           </div>
           <div class='map-key-layers '>
-            <div class='form-check' v-for='layer in layers'>
-              <input class="form-check-input" type="checkbox" v-model='layer.on' v-bind:id='layer.name + "_check"' @click="toggleLayer()" >
-              <label class="form-check-label" v-bind:for='layer.name + "_check"' v-html='layer.display'></label>
+            <div class='row' v-for='layer in layers'>
+              <div class="col-2">
+                <span class='legend-item' v-bind:style='{ backgroundColor: layer.color }' />
+              </div>
+              <div class='col-10'>
+                {{layer.display}}
+              </div>
             </div>
           </div>
         </div>
@@ -36,8 +40,8 @@
         <div class="row">
           <div class="col-lg-12">
             <p>
-              Un total de 1.739 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo entre 1998 y 2017. De esa área edificada agregada, 38% fue relleno, 45% fue extensión, 2% fue crecimiento discontinuo y 16% fue inclusión.
-              Un total de 737 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo en el período anterior, entre 1985 y 1998. De esa área construida adicional, 32% fue relleno, 47% fue extensión, 2% fue crecimiento discontinuo y el 18% fue inclusión.
+              Un total de 1.739 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo entre 2000 y 2018. De esa área edificada agregada, 31.4% fue relleno, 18.1% fue extensión, 13% fue crecimiento discontinuo y 37.5% fue inclusión.
+              Un total de 737 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo en el período anterior, entre 1990 y 2000. De esa área construida adicional, 24.9% fue relleno, 32.9% fue extensión, 18.0% fue crecimiento discontinuo y el 24.2% fue inclusión.
             </p>
             <p>
               <span v-html='highlight("Relleno", "#ff01c4")' /> consiste en todos los píxeles agregados en el nuevo periodo que ocupan Espacio Abierto Urbanizado en la Huella Urbana del periodo inmediatamente anterior;
@@ -85,7 +89,7 @@ export default {
       layers: [
         {on: true, display: 'Área Construida', name: 'addedArea_??_builtUp', url: '/added_area/built_up_area_??/', color: 'rgba(52,22,186,0.5)'},
         {on: true, display: 'Relleno', name: 'addedArea_??_infill', url: '/added_area/infill_??_!!/', color: 'rgba(255,1,196,0.5)'},
-        {on: true, display: 'Extensión', name: 'addedArea_??_extension', url: '/added_area/extension_??_!!/', color: 'rgba(255,255,16,0.5)'},
+        {on: true, display: 'Extensión', name: 'addedArea_??_extension', url: '/added_area/extension_??_!!/', color: '#ff9b10'},
         {on: true, display: 'Crecimiento Discontinuo', name: 'addedArea_??_leapfrog', url: '/added_area/leapfrog_??_!!/', color: 'rgba(254,0,0,0.5)'},
         {on: true, display: 'Inclusión', name: 'addedArea_??_inclusion', url: '/added_area/inclusion_??_!!/', color: 'rgba(53,136,102,0.5)'}
       ]
@@ -282,17 +286,6 @@ export default {
 #mapbox {
   height: 100%;
   width: 100%;
-}
-#map-key {
-  background: white;
-  padding: 5px;
-  font-size: 13px;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 190px;
-  z-index: 2;
-  text-align: left;
 }
 /*
 .map-key-year {

@@ -13,9 +13,13 @@
             </label>
           </div>
           <div class='map-key-layers '>
-            <div class='form-check' v-for='layer in layers'>
-              <input class="form-check-input" type="checkbox" v-model='layer.on' v-bind:id='layer.name + "_check"' @click="toggleLayer()" >
-              <label class="form-check-label" v-bind:for='layer.name + "_check"' v-html='layer.display'></label>
+            <div class='row' v-for='layer in layers'>
+              <div class="col-2">
+                <span class='legend-item' v-bind:style='{ backgroundColor: layer.color }' />
+              </div>
+              <div class='col-10'>
+                {{layer.display}}
+              </div>
             </div>
           </div>
         </div>
@@ -28,6 +32,9 @@
         <div class="row pb-2 pt-4 mb-4 border-top border-bottom">
           <div class="col-12">
             <p>
+              El mapa describe las cuatro categorías que componen el área urbana de la ciudad de Portoviejo y cómo estas han evolucionado a lo largo de los cuatro periodos de estudio.
+              <br>
+              <br>
               La huella urbana se puede dividir en cuatro categorías de espacio:
               <span v-html='highlight("urbano", "#2300BD")' />,
               <span v-html='highlight("suburbano", "#C2799F")' />,
@@ -58,7 +65,19 @@
               Los píxeles <span v-html='highlight("rurales", "#000")' /> son píxeles con menos del 25% de píxeles construidos en su círculo de caminabilidad.
             </p>
             <p>
-              El <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' /> son todos los píxeles de espacios abiertos y espacios abiertos capturados asociados con la extensión urbana. El espacio abierto marginal consta de todos los píxeles de espacio abierto a menos de 100 metros de píxeles urbanos o suburbanos; el espacio abierto capturado consta de todos los grupos de espacio abierto que están completamente rodeados por píxeles urbanos y suburbanos del área construida y los píxeles de espacio abierto que los rodean, y que tienen menos de 200 hectáreas de área.
+              El <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' /> son áreas sin edificar y zonas verdes desarrolladas que incluye:
+            </p>
+            <ul>
+              <li>Campo abierto </li>
+              <li>Bosques</li>
+              <li>Campos de cultivo</li>
+              <li>Parques</li>
+              <li>Áreas urbanas sin edificar que no han sido subdivididas</li>
+              <li>Suelo deforestado</li>
+              <li>Cuerpos de agua: mares, ríos, lagos y canales</li>
+            </ul>
+            </p>
+              El espacio abierto marginal consta de todos los píxeles de espacio abierto a menos de 100 metros de píxeles urbanos o suburbanos; y el espacio abierto capturado consta de todos los grupos de espacio abierto que están completamente rodeados por píxeles urbanos y suburbanos del área construida y los píxeles de espacio abierto que los rodean, y que tienen menos de 200 hectáreas de área.
             </p>
           </div>
         </div>
@@ -95,9 +114,7 @@ export default {
         "extent_??_urbanBuilt",
         "extent_??_suburbanBuilt",
         "extent_??_ruralBuilt",
-        "extent_??_urbanOpen",
-        "extent_??_exurbanBuilt",
-        "extent_??_exurbanOpen"
+        "extent_??_urbanOpen"
       ],
       allLayers: {},
       layers: [
@@ -128,22 +145,7 @@ export default {
           name: "extent_??_urbanOpen",
           url: "/urban_extent/open_space_??/",
           color: "#F6F5A4"
-        },
-        {
-          on: true,
-          display: "Área Exurbana Edificada",
-          name: "extent_??_exurbanBuilt",
-          url: "/urban_extent/exurban_built_up_??/",
-          color: "#BCBCBC"
-        },
-        {
-          on: true,
-          display: "Espacio Abierto Exurbano",
-          name: "extent_??_exurbanOpen",
-          url: "/urban_extent/exurban_open_??/",
-          color: "#E1E1E1"
-        }
-      ]
+        }      ]
     };
   },
   computed: {
@@ -428,17 +430,6 @@ export default {
 #mapbox {
   height: 100%;
   width: 100%;
-}
-#map-key {
-  background: white;
-  padding: 5px;
-  font-size: 13px;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 190px;
-  z-index: 2;
-  text-align: left;
 }
 /*
 .map-key-year {

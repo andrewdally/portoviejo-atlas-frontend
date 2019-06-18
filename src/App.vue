@@ -106,7 +106,7 @@ body {
     padding-top: 25vh;
   }
 }
-.btn-1985, .btn-1998, .btn-2017{
+.btn-1985, .btn-1998, .btn-2007, .btn-2017{
   color: white;
   cursor: pointer;
 }
@@ -121,6 +121,10 @@ body {
   background: rgba(172, 35, 65, 1) !important;
   border-color: rgba(172, 35, 65, 1) !important;
 }
+.btn-2007.active {
+  background: rgba(47, 163, 235, 1) !important;
+  border-color: rgba(47, 163, 235, 1) !important;
+}
 .btn-2017.active {
   background: rgba(218, 139, 64, 1) !important;
   border-color: rgba(218, 139, 64, 1) !important;
@@ -133,6 +137,11 @@ body {
   background: rgba(172, 35, 65, .8);
   border-color: rgba(172, 35, 65, .8);
 }
+.btn-2007:hover {
+  background: rgba(47, 163, 235, .8) !important;
+  border-color: rgba(47, 163, 235, .8) !important;
+}
+
 .btn-2017:hover {
   background: rgba(218, 139, 64, .8);
   border-color: rgba(218, 139, 64, .8);
@@ -165,5 +174,16 @@ body {
   width: 20px;
   height: 15px;
   margin-bottom: -3px;
+}
+#map-key {
+  background: white;
+  padding: 5px;
+  font-size: 13px;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 210px;
+  z-index: 2;
+  text-align: left;
 }
 </style>

@@ -24,12 +24,19 @@
             <h3>Densidad de Vías Arteriales</h3>
           </div>
         </div>
-        <div class="row border-bottom pb-4">
+        <div class="row border-bottom mb-4 pb-4">
           <div class="col-4">
             <big-num heading='Pre 1990' number='3.76' units='km/km²' color='#ac2341'/>
           </div>
           <div class="col-4">
-            <big-num heading='1990-2017' number='2.39' units='km/km²' color='#da8b40'/>
+            <big-num heading='1990-2015' number='2.39' units='km/km²' color='#da8b40'/>
+          </div>
+        </div>
+        <div class="row border-bottom mb-4 pt-2 pb-3">
+          <div class="col-12">
+            <p>
+              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 era de 2.39 km/km2, frente a 3.76 km/km2en su área anterior a 1990.
+            </p>
           </div>
         </div>
         <div class="row border-bottom pt-4 mt-4 pb-5 mb-5">
@@ -43,12 +50,19 @@
             <h3>Porcentaje de Área Edificada a Distancia Caminable de una Vía Arterial</h3>
           </div>
         </div>
-        <div class="row border-bottom pb-4">
+        <div class="row border-bottom mb-4 pb-4">
           <div class="col-4">
             <big-num heading='Pre 1990' number='99.6%' color='#ac2341'/>
           </div>
           <div class="col-4">
-            <big-num heading='1990-2015' number='99.14' color='#da8b40'/>
+            <big-num heading='1990-2015' number='99.14%' color='#da8b40'/>
+          </div>
+        </div>
+        <div class="row border-bottom mb-4 pt-2 pb-3">
+          <div class="col-12">
+            <p>
+              El porcentaje de área construida a distancia caminable de una vía arterial en el área de expansión de Portoviejo entre 1990 y 2015 era de 99.14%, frente a 99.6% en el área anterior a 1990.
+            </p>
           </div>
         </div>
         <div class="row border-bottom pt-4 mt-4 pb-5 mb-5">
@@ -59,12 +73,27 @@
         </div>
         <div class="row border-bottom pb-2 mb-5">
           <div class="col-12 pb-4">
-            <h3>Distancia en Linea Recta a Vías Arterial</h3>
+            <h3>Distancia en Linea Recta a Vías Arteriales</h3>
+          </div>
+        </div>
+        <div class="row border-bottom pb-4 mb-4">
+          <div class="col-4">
+            <big-num heading='Pre 1990' number='84' units='meters' color='#ac2341'/>
+          </div>
+          <div class="col-4">
+            <big-num heading='1990-2015' number='123' units='meters' color='#da8b40'/>
+          </div>
+        </div>
+        <div class="row border-bottom mb-4 pt-2 pb-3">
+          <div class="col-12">
+            <p>
+              La distancia en línea recta a una vía arterial en Portoviejo era de 123 m entre 1990 y 2015.
+            </p>
           </div>
         </div>
         <div class="row border-bottom pb-5 mb-5">
           <div class="col-12">
-            <h5 class='text-center'>Distancia en Linea Recta ({{selectYear}})</h5>
+            <h5 class='text-center'>Distancia en línea recta a vías arteriales ({{selectYear}})</h5>
             <canvas id='arterial_roads_beeline_bar' class='city-graphic' />
           </div>
         </div>

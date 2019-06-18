@@ -22,13 +22,16 @@
       <div id="cityData" class="col-lg-6 order-first">
         <h1 class="mt-5 mb-2">Huella Urbana</h1>
         <div class="row pb-4 pt-4 mb-4 border-top border-bottom">
-          <div class="col-sm-4">
+          <div class='col-lg-6 col-md-3 col-sm-6'>
             <big-num heading='1985' number='1,155' units='Hectáreas' color='#2e2e76'/>
           </div>
-          <div class="col-sm-4">
+          <div class='col-lg-6 col-md-3 col-sm-6'>
             <big-num heading='1998' number='2,254' units='Hectáreas' color='#ac2341'/>
           </div>
-          <div class="col-sm-4">
+          <div class='col-lg-6 col-md-3 col-sm-6'>
+            <big-num class='mb-3' heading='2007' number='3,376' units="Hectáreas" color='#2FA3EB'/>
+          </div>
+          <div class='col-lg-6 col-md-3 col-sm-6'>
             <big-num heading='2017' number='5,176' units='Hectáreas' color='#da8b40'/>
           </div>
         </div>
@@ -36,7 +39,7 @@
           <div class="col-md-6 col-lg-12">
             <p>
               La huella urbana de Portoviejo en 2017 fue de 5.176 hectáreas, aumentando a una tasa promedio anual de 4,45% desde 1998.
-              La huella urbana en 1.998 fue de 2.254 hectáreas, aumentando a una tasa promedio anual de 4,95% desde 1.985, cuando su huella urbana era  de 1.115 hectáreas.
+              La huella urbana en 1.998 fue de 2.254 hectáreas, aumentando a una tasa promedio anual de 4,95% desde 1.985, cuando su huella urbana era  de 1.115 hectáreas
             </p>
           </div>
           <div class="col-md-6 col-lg-12">
@@ -52,10 +55,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class="col-4">
-            <big-num heading='1985-1998' number='4.95%' color='#FF6A4D'/>
+            <big-num heading='Pre 1990' number='4.95%' color='#FF6A4D'/>
           </div>
           <div class="col-4">
-            <big-num heading='1998-2017' number='4.45%' color='#97928C'/>
+            <big-num heading='1990-2015' number='4.45%' color='#97928C'/>
           </div>
         </div>
         <div class="row border-bottom pb-4 mb-4">
@@ -91,8 +94,21 @@
           <div class='col-12'>
             <p>
               La población de Portoviejo en 2.018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2.000.
-              La población de Portoviejo en 2.000 era de 117.845 personas, aumentando a una tasa promedio anual de 1,72% desde 1990, cuando su población era de 93.426 habitantes.
+              La población de Portoviejo en 2.018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2.000.
             </p>
+          </div>
+        </div>
+        <div class="row border-bottom">
+          <div class='col-12'>
+            <h3 class='mb-4'>Cambio Porcentual</h3>
+          </div>
+        </div>
+        <div class="row pb-4 pt-4 mb-4 border-bottom">
+          <div class='col-6'>
+            <big-num class='mb-3' heading='Pre 1990' number='1.7%' color='#FF6A4D'/>
+          </div>
+          <div class='col-6'>
+            <big-num heading='1990-2015' number='3.1%' color='#97928C'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -139,10 +155,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-6'>
-            <big-num class='mb-3' heading='1985-1998' number='-4.1%' color='#FF6A4D'/>
+            <big-num class='mb-3' heading='Pre 1990' number='-4.1%' color='#FF6A4D'/>
           </div>
           <div class='col-6'>
-            <big-num heading='1998-2017' number='-1.41%' color='#97928C'/>
+            <big-num heading='1990-2015' number='-1.41%' color='#97928C'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -189,10 +205,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-6'>
-            <big-num class='mb-3' heading='1985-1998' number='-3.23%' color='#FF6A4D'/>
+            <big-num class='mb-3' heading='Pre 1990' number='-3.23%' color='#FF6A4D'/>
           </div>
           <div class='col-6'>
-            <big-num heading='1998-2017' number='-1.14%' color='#97928C'/>
+            <big-num heading='1990-2015' number='-1.14%' color='#97928C'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -219,11 +235,13 @@ export default {
       years: [
         window.city.City.t1.substr(0, 4),
         window.city.City.t2.substr(0, 4),
+        window.city.City.t2b.substr(0, 4),
         window.city.City.t3.substr(0, 4)
       ],
       extentYears: [
         window.city.City.t1.substr(0, 4),
         window.city.City.t2.substr(0, 4),
+        window.city.City.t2b.substr(0, 4),
         window.city.City.t3.substr(0, 4)
       ],
       allLayers: {},
@@ -242,6 +260,10 @@ export default {
         },
         {
           display: this.city.City.t2.substr(0, 4),
+          checked: this.years[1].checked
+        },
+        {
+          display: this.city.City.t2b.substr(0, 4),
           checked: this.years[1].checked
         },
         {
@@ -267,9 +289,6 @@ export default {
     this.lightBG = L.mapbox
       .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")
       .addTo(this.map);
-    // this.labelsMap = L.mapbox
-    //   .styleLayer("mapbox://styles/willcmccusker/cj1s19z2u000l2snsh0t9i8gw")
-    //   .addTo(this.map);
     this.setLayers();
     this.loadMapLayers();
   },
@@ -381,11 +400,9 @@ export default {
         mine: true
         // maxZoom: 13
       };
-
-      for (var i = 0; i < 3; i++) {
-        for (var j = 0; j < i + 1; j++) {
-          var bound = j === 0 ? "inner" : j === 1 ? "middle" : "outer";
-          var name = "t" + (i + 1) + "_" + bound;
+      for (var t = 1; t < 5; t++) {
+        for (var sec = 1; sec <= t; sec++) {
+          var name  = "t" + t + "_t" + sec;
           options.opacity = 0.7;
           options.name = "extent_" + name;
           if (!this.allLayers["extent_" + name]) {
@@ -405,8 +422,9 @@ export default {
           }
         }
       }
+      console.log(this.allLayers)
       options.opacity = 1;
-      this.addYearLayers(3, options);
+      this.addYearLayers(4, options);
     },
     addLayer (name) {
       if (this.allLayers[name]) {
@@ -418,6 +436,7 @@ export default {
       }
     },
     addYearLayers(yearCount, options) {
+      console.log(this.layers)
       var inc = 0;
       for (var i = 1; i < yearCount + 1; i++) {
         var j = i - inc;
@@ -436,7 +455,7 @@ export default {
             url +
             "{z}/{x}/{y}.png";
           var layer = this.generateLayer(name, u, options);
-
+          console.log('layer', layer);
           if (!this.allLayers[name]) {
             this.allLayers[name] = layer;
           }
@@ -458,58 +477,21 @@ export default {
       }
     },
     loadMapLayers() {
-      if (this.extraLayersVisible) {
-        var timePeriod = "t" + (this.years.indexOf(this.compositionYear) + 1);
-        var timePeriod_ = "t" + (this.years.indexOf(this.compositionYear) + 2);
-        var layersToAdd = [];
-        this.layers.forEach(layer => {
-          if (layer.on) {
-            layersToAdd.push(
-              layer.name.replace("??", timePeriod).replace("!!", timePeriod_)
-            );
-          }
-        });
-      } else {
-        var sequence = "";
-        this.years.forEach(year => {
-          sequence += this.extentYears.includes(year)  ? "1" : "0";
-        });
-        layersToAdd = [];
-        switch (sequence) {
-          case "000":
-            break;
-          case "100":
-            layersToAdd.push("extent_t1_inner");
-            break;
-          case "110":
-            layersToAdd.push("extent_t1_inner");
-            layersToAdd.push("extent_t2_middle");
-            break;
-          case "101":
-            layersToAdd.push("extent_t1_inner");
-            layersToAdd.push("extent_t3_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-          case "111":
-            layersToAdd.push("extent_t1_inner");
-            layersToAdd.push("extent_t2_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-          case "010":
-            layersToAdd.push("extent_t2_inner");
-            layersToAdd.push("extent_t2_middle");
-            break;
-          case "011":
-            layersToAdd.push("extent_t2_inner");
-            layersToAdd.push("extent_t2_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-          case "001":
-            layersToAdd.push("extent_t3_inner");
-            layersToAdd.push("extent_t3_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-        }
+      var layersToAdd = []
+      if (this.extentYears.includes(this.years[3])) {
+        layersToAdd = ["extent_t4_t1", "extent_t4_t2", "extent_t4_t3", "extent_t4_t4"]
+      }
+      if (this.extentYears.includes(this.years[2])) {
+        layersToAdd[2] = "extent_t3_t3"
+        layersToAdd[1] = "extent_t3_t2"
+        layersToAdd[0] = "extent_t3_t1"
+      }
+      if (this.extentYears.includes(this.years[1])) {
+        layersToAdd[1] = "extent_t2_t2"
+        layersToAdd[0] = "extent_t2_t1"
+      }
+      if (this.extentYears.includes(this.years[0])) {
+        layersToAdd[0] = "extent_t1_t1"
       }
       var layersToRemove = this.getLayers();
       layersToRemove.forEach(layerToRemove => {
@@ -547,17 +529,6 @@ export default {
 #mapbox {
   height: 100%;
   width: 100%;
-}
-#map-key {
-  background: white;
-  padding: 5px;
-  font-size: 13px;
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 190px;
-  z-index: 2;
-  text-align: left;
 }
 #cityData {
   background: white;

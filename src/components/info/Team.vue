@@ -51,7 +51,7 @@ export default {
           ]
         },
         {
-          image: '',
+          image: '/img/Tamayo.jpg',
           lead: 'María Mónica Salazar Tamayo es becaria académica en el Programa de Expansión Urbana del Instituto Marron de Gerencia Urbana de la Universidad de Nueva York.',
           graphs: [
             'Antes de mudarse a Nueva York, ella trabajó para el instituto como consultora para América Latina apoyando en especial el proyecto de POTs Modernos de Colombia. También, fue asesora del Sistema General de Regalías del Departamento Nacional de Planeación de Colombia en el cual estaba encargada de apoyar a los gobiernos locales en la implementación de proyectos de inversión y el manejo de las transferencias intergubernamentales.',

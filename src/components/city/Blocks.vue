@@ -31,7 +31,7 @@
         <h1 class="mt-5 pb-4 mb-2">Tamaño promedio de un lote</h1>
         <div class="row pb-2 pt-4 mb-4 border-top border-bottom">
           <div class="col-12 mb-2">
-            <h3>Tomaño de Manzana</h3>
+            <h3>Tamaño de Manzana</h3>
           </div>
         </div>
         <div class="row border-bottom pb-4 mb-4">
@@ -42,25 +42,70 @@
             <big-num heading='1990-2015' number='5' units='Hectáreas' color='#da8b40'/>
           </div>
         </div>
+        <div class="row border-bottom mb-4 pt-2 pb-3">
+          <div class="col-12">
+            <p>
+              El tamaño promedio de las manzanas en el área de expansión de Portoviejo entre 1990 y 2015 era de 5 hectáreas, frente a 2 hectáreas en su área anterior a 1990.
+            </p>
+          </div>
+        </div>
         <div class="row pt-4 pb-4 mb-4 border-bottom">
           <div class="col-lg-12">
             <canvas id='blocks_plots_average_block_bar' />
           </div>
         </div>
+        <div class="row pt-4 pb-4 mb-4 border-bottom">
+          <div class="col-lg-12">
+            <p>
+              La categoría residencial incluye las siguientes subcategorías:
+            </p>
+            <p>
+              <span v-html='highlight("Asentamiento atomizado", "rgb(202, 145, 121)")' /> El desarrollo atomizado es de trazado irregular y no fue subdividido antes que se efectuara el desarrollo residencial. Podría incluir asentamientos irregulares sin subdivisión, casas construidas en parcelas irregulares de tierra (por ejemplo, villas) o casas edificadas en áreas rurales que no fueron subdivididas
+            </p>
+            <p>
+              <span v-html='highlight("Subdivisión informal", "rgb(191, 97, 77)")' />  Las subdivisiones informales son áreas que han sido subdivididas para uso urbano, pero que carecen de evidencia visible de formalidad legal, como calles pavimentadas, iluminación pública o aceras. Los tamaños de los lotes son regulares o semirregulares.
+            </p>
+            <p>
+              <span v-html='highlight("Subdivisión formal", "rgb(164, 53, 43)")' /> Los trazados formales son similares a los informales, pero presentan un mayor nivel de infraestructura. Específicamente, todas las vías deben ser pavimentadas para que un área califique como subdivisión formal. Las aceras y las luminarias públicas son usualmente visibles. Los trazados formales se caracterizan comúnmente por tener mejores conexiones a redes de vías arteriales, y una relación lineal con el sistema de vías existentes
+            </p>
+            <p>
+              <span v-html='highlight("Proyectos de Vivienda", "rgb(126, 8, 18)")' /> Los proyectos de vivienda pueden incluir una gama de escenarios de trazados y desarrollos que varían desde grandes torres de apartamentos a casas suburbanas adosadas. Los proyectos de vivienda comparten un aspecto: las estructuras deben ser esencialmente homogéneas.
+            </p>
+            <p>
+              Estas cuatro categorías pretenden reflejar el grado de complejidad de la esfera económica conocida como sector inmobiliario. El sector inmobiliario alcanza su nivel más básico en las áreas de viviendas atomizadas, en donde la organización del sector de viviendas es insuficiente, incluso para asegurar tamaños de lotes y anchos de vías consistentes.
+            </p>
+          </div>
+        </div>
+
+
         <div class="row border-bottom pb-4 mb-4">
           <div class="col-lg-12">
-            <h3>Porcentaje de Asentamientos en uno Residencial</h3>
+            <h3>Porcentaje de Asentamientos en uso Residencial</h3>
+          </div>
+        </div>
+        <div class="row border-bottom mb-4 pt-2 pb-3">
+          <div class="col-12">
+            <p>
+              El porcentaje de asentamientos en uso residencial en el área de expansión de Portoviejo entre 1990 y 2015 estaba compuesto por: asentamientos atomísticos con 73%; subdivisiones informales con 11.1%; subdivisiones formales con 13.4% y proyectos de vivienda con 2.7%.
+            </p>
           </div>
         </div>
         <div class="row border-bottom pb-4 mb-4">
           <div class="col-12">
-            <h5 class="text-center">Porcentaje de Asentamientos ({{selectYear}})</h5>
+            <h5 class="text-center">Porcentaje de asentamientos en uso residencial ({{selectYear}})</h5>
             <canvas id='blocks_and_plots_composition_special_stacked' />
           </div>
         </div>
         <div class="row border-bottom mb-4">
           <div class="col-lg-12 mb-4">
             <h3>Promedio del tamaño de las manzanas</h3>
+          </div>
+        </div>
+        <div class="row border-bottom mb-4 pt-2 pb-3">
+          <div class="col-12">
+            <p>
+              El promedio del tamaño de las manzanas del área de expansión formal de Portoviejo era de 210 m<sup>2</sup> entre 1990 y 2015, frente a 259 m<sup>2</sup> en su área anterior a 1990.
+            </p>
           </div>
         </div>
         <div class="row border-bottom pt-4 pb-4 mb-4">
@@ -290,7 +335,11 @@
         });
 
         layersToAdd.forEach(layer => this.addLayer(layer));
-      }
+      },
+      highlight(text, background, color='white') {
+        return(`<strong style='color: ${color}; padding: 0 5px; background-color: ${background};'><em>${text}</em></strong>`)
+      },
+
     },
     components: {
       BigNum

@@ -1,4 +1,4 @@
-forecasts<template :city='city'>
+<template :city='city'>
   <div>
     <div class="row">
       <div class="col-lg-6 order-last mapbox-outer-wrap">
@@ -31,7 +31,12 @@ forecasts<template :city='city'>
         <h1 class="mt-5 mb-2">Proyecciones</h1>
         <div class="row pb-4 pt-4 border-top border-bottom">
           <div class="col-12">
-            <p>This would be a good place to provide a brief description of how these projections are made.</p>
+            <p>
+              A partir de las tendencias del crecimiento de población desarrolladas por el INE se construyeron tres escenarios para determinar el posible crecimiento tanto del área construida como el de la Huella Urbana de Portoviejo.
+              <br>
+              <br>
+              Cada uno de los escenarios, tienen en cuenta tres variables: (i) la sensibilidad a la construcción en pendiente que se puede observar en la ciudad, (ii) las áreas de reserva y (iii) la tendencia de cambio en la densidad. Precisamente por que se usan tres tendencias de cambio de densidad diferente es que se tienen tres escenarios. La primera tendencia refleja una densidad constante, la segunda tendencia refleja el cambio promedio de la densidad que ha registrado la ciudad y la tercera tendencia refleja el cambio promedio de la densidad que ha registrado el mundo.
+            </p>
           </div>
         </div>
         <div class="row pb-2 pt-4 border-bottom">
@@ -108,8 +113,8 @@ forecasts<template :city='city'>
         legend: [
           {name: 'Huella Urbana 2017', color: '#da8b40'},
           {name: 'Densidad constante', color: 'blue'},
-          {name: 'Ciudad promedio', color: 'green'},
-          {name: 'Promedio de los paises menos desarrollados', color: 'red'}
+          {name: 'Tendencia Ciudad', color: 'green'},
+          {name: 'Tendencia Mundo', color: 'red'}
         ]
       }
     },
@@ -127,9 +132,6 @@ forecasts<template :city='city'>
 
       this.lightBG = L.mapbox
         .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")
-        .addTo(this.map);
-      this.labelsMap = L.mapbox
-        .styleLayer("mapbox://styles/willcmccusker/cj1s19z2u000l2snsh0t9i8gw")
         .addTo(this.map);
       this.setLayers();
       this.loadMapLayers();
