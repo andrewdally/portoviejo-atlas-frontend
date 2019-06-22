@@ -23,23 +23,23 @@
         <h1 class="mt-5 mb-2">Huella Urbana</h1>
         <div class="row pb-4 pt-4 mb-4 border-top border-bottom">
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='1985' number='1,155' units='Hectáreas' color='#2e2e76'/>
+            <big-num heading='1985' :number='city.DataSet.urban_extent_actuals_t1' units='Hectáreas' color='#2e2e76'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='1998' number='2,254' units='Hectáreas' color='#ac2341'/>
+            <big-num heading='1998' :number='city.DataSet.urban_extent_actuals_t2' units='Hectáreas' color='#ac2341'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='2007' number='3,376' units="Hectáreas" color='#2FA3EB'/>
+            <big-num class='mb-3' heading='2007' :number='city.DataSet.urban_extent_actuals_t2b' units="Hectáreas" color='#2FA3EB'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='2017' number='5,176' units='Hectáreas' color='#da8b40'/>
+            <big-num heading='2017' :number='city.DataSet.urban_extent_actuals_t3' units='Hectáreas' color='#da8b40'/>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-12">
             <p>
-              La huella urbana de Portoviejo en 2017 fue de 5.176 hectáreas, aumentando a una tasa promedio anual de 4,45% desde 1998.
-              La huella urbana en 1.998 fue de 2.254 hectáreas, aumentando a una tasa promedio anual de 4,95% desde 1.985, cuando su huella urbana era  de 1.115 hectáreas
+              La huella urbana de Portoviejo en 2017 fue de {{city.DataSet.urban_extent_actuals_t3}} hectáreas, aumentando a una tasa promedio anual de {{urban_extent_change_t2_t3_percent}} desde 1998.
+              La huella urbana en 1.998 fue de {{city.DataSet.urban_extent_actuals_t2}} hectáreas, aumentando a una tasa promedio anual de {{urban_extent_change_t1_t2_percent}} desde 1985, cuando su huella urbana era  de {{city.DataSet.urban_extent_actuals_t1}} hectáreas
             </p>
           </div>
           <div class="col-md-6 col-lg-12">
@@ -55,10 +55,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class="col-4">
-            <big-num heading='Pre 1990' number='4.95%' color='#FF6A4D'/>
+            <big-num heading='Pre 1990' :number='urban_extent_change_t1_t2_percent' color='#FF6A4D'/>
           </div>
           <div class="col-4">
-            <big-num heading='1990-2015' number='4.45%' color='#97928C'/>
+            <big-num heading='1990-2015' :number='urban_extent_change_t2_t3_percent' color='#97928C'/>
           </div>
         </div>
         <div class="row border-bottom pb-4 mb-4">
@@ -73,16 +73,16 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1985' number='93,426' color='#2e2e76'/>
+            <big-num class='mb-3' heading='1985' :number='city.DataSet.population_t1' color='#2e2e76'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1998' number='117,845' color='#ac2341'/>
+            <big-num class='mb-3' heading='1998' :number='city.DataSet.population_t2' color='#ac2341'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='2007' number='170,854' color='#2FA3EB'/>
+            <big-num class='mb-3' heading='2007' :number='city.DataSet.population_t2b' color='#2FA3EB'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='2017' number='211,755' color='#da8b40'/>
+            <big-num heading='2017' :number='city.DataSet.population_t3' color='#da8b40'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -93,8 +93,7 @@
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-12'>
             <p>
-              La población de Portoviejo en 2.018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2.000.
-              La población de Portoviejo en 2.018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2.000.
+              La población de Portoviejo en 2018 era de {{city.DataSet.population_t3}} personas, aumentando a una tasa anual promedio de {{population_change_t2_t3_percent}} desde 2000.
             </p>
           </div>
         </div>
@@ -105,10 +104,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-6'>
-            <big-num class='mb-3' heading='Pre 1990' number='1.7%' color='#FF6A4D'/>
+            <big-num class='mb-3' heading='Pre 1990' :number='population_change_t1_t2_percent' color='#FF6A4D'/>
           </div>
           <div class='col-6'>
-            <big-num heading='1990-2015' number='3.1%' color='#97928C'/>
+            <big-num heading='1990-2015' :number='population_change_t2_t3_percent' color='#97928C'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -123,16 +122,16 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1985' number='154' units='Personas/Hectáreas' color='#2e2e76'/>
+            <big-num class='mb-3' heading='1985' :number='city.DataSet.density_built_up_t1' units='Personas/Hectáreas' color='#2e2e76'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1998' number='89' units='Personas/Hectáreas' color='#ac2341'/>
+            <big-num class='mb-3' heading='1998' :number='city.DataSet.density_built_up_t2' units='Personas/Hectáreas' color='#ac2341'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='2007' number='85' units='Personas/Hectáreas' color='#2FA3EB'/>
+            <big-num class='mb-3' heading='2007' :number='city.DataSet.density_built_up_t2b' units='Personas/Hectáreas' color='#2FA3EB'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='2017' number='68' units='Personas/Hectáreas' color='#da8b40'/>
+            <big-num heading='2017' :number='city.DataSet.density_built_up_t3' units='Personas/Hectáreas' color='#da8b40'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -143,8 +142,8 @@
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-12'>
             <p>
-              La densidad del área edificada en Portoviejo en 2.017 fue de 68 personas por hectárea, disminuyendo a una tasa promedio anual de -1,41% desde 1.998.
-              La densidad del área edificada en 1.998 fue de 89 personas por hectárea, disminuyendo a una tasa promedio anual de -4,1% desde 1.985 cuando la densidad del área construida era de 154 personas por hectárea.
+              La densidad del área edificada en Portoviejo en 2017 fue de {{city.DataSet.density_built_up_t3}} personas por hectárea, disminuyendo a una tasa promedio anual de {{density_built_up_change_t2_t3_percent}} desde 1998.
+              La densidad del área edificada en 1998 fue de {{city.DataSet.density_built_up_t2}} personas por hectárea, disminuyendo a una tasa promedio anual de {{density_built_up_change_t1_t2_percent}} desde 1985 cuando la densidad del área construida era de {{city.DataSet.density_built_up_t1}} personas por hectárea.
             </p>
           </div>
         </div>
@@ -155,10 +154,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-6'>
-            <big-num class='mb-3' heading='Pre 1990' number='-4.1%' color='#FF6A4D'/>
+            <big-num class='mb-3' heading='Pre 1990' :number='density_built_up_change_t1_t2_percent' color='#FF6A4D'/>
           </div>
           <div class='col-6'>
-            <big-num heading='1990-2015' number='-1.41%' color='#97928C'/>
+            <big-num heading='1990-2015' :number='density_built_up_change_t2_t3_percent' color='#97928C'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -173,16 +172,16 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1985' number='80.9' units='Personas/Hectáreas' color='#2e2e76'/>
+            <big-num class='mb-3' heading='1985' :number='city.DataSet.density_urban_extent_t1' units='Personas/Hectáreas' color='#2e2e76'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1998' number='52.3' units='Personas/Hectáreas' color='#ac2341'/>
+            <big-num class='mb-3' heading='1998' :number='city.DataSet.density_urban_extent_t2' units='Personas/Hectáreas' color='#ac2341'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='2007' number='50.6' units='Personas/Hectáreas' color='#2FA3EB'/>
+            <big-num class='mb-3' heading='2007' :number='city.DataSet.density_urban_extent_t2b' units='Personas/Hectáreas' color='#2FA3EB'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='2017' number='42.3' units='Personas/Hectáreas' color='#da8b40'/>
+            <big-num heading='2017' :number='city.DataSet.density_urban_extent_t3' units='Personas/Hectáreas' color='#da8b40'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -193,8 +192,8 @@
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-12'>
             <p>
-              La densidad de la huella urbana en Portoviejo en 2.017 fue de 42,3 personas por hectárea, disminuyendo a una tasa promedio anual de -1,14% desde 1.998.
-              La densidad de la huella urbana en 1.998 fue de 52,3 personas por hectárea, disminuyendo a una tasa promedio anual de -3,23 % desde 1.985 cuando la densidad de la huella urbana era de 80,9 personas por hectárea.
+              La densidad de la huella urbana en Portoviejo en 2.017 fue de {{city.DataSet.density_urban_extent_t3}} personas por hectárea, disminuyendo a una tasa promedio anual de {{density_urban_extent_change_t2_t3_percent}} desde 1.998.
+              La densidad de la huella urbana en 1.998 fue de {{city.DataSet.density_urban_extent_t2}} personas por hectárea, disminuyendo a una tasa promedio anual de {{density_urban_extent_change_t1_t2_percent}} desde 1.985 cuando la densidad de la huella urbana era de {{city.DataSet.density_urban_extent_t1}} personas por hectárea.
             </p>
           </div>
         </div>
@@ -205,10 +204,10 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-6'>
-            <big-num class='mb-3' heading='Pre 1990' number='-3.23%' color='#FF6A4D'/>
+            <big-num class='mb-3' heading='Pre 1990' :number='density_urban_extent_change_t1_t2_percent' color='#FF6A4D'/>
           </div>
           <div class='col-6'>
-            <big-num heading='1990-2015' number='-1.14%' color='#97928C'/>
+            <big-num heading='1990-2015' :number='density_urban_extent_change_t2_t3_percent' color='#97928C'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -223,32 +222,37 @@
 <script>
 import { makeChart, makeStacked, makeLine } from '../../assets/graphing.js'
 import BigNum from './BigNum'
+import {cities} from '../../assets/json/master'
 
 export default {
   name: "UrbanExtentPopulation",
   data() {
     return {
-      city: window.city,
+      city: cities[this.$route.params.city_slug],
       chartObjects: {},
       laterYear: true,
       host: '{s}.atlasofurbanexpansion.org',
-      years: [
-        window.city.City.t1.substr(0, 4),
-        window.city.City.t2.substr(0, 4),
-        window.city.City.t2b.substr(0, 4),
-        window.city.City.t3.substr(0, 4)
-      ],
-      extentYears: [
-        window.city.City.t1.substr(0, 4),
-        window.city.City.t2.substr(0, 4),
-        window.city.City.t2b.substr(0, 4),
-        window.city.City.t3.substr(0, 4)
-      ],
       allLayers: {},
       layers: []
     };
   },
   computed: {
+    years () {
+      return [
+        this.city.City.t1.substr(0, 4),
+        this.city.City.t2.substr(0, 4),
+        this.city.City.t2b.substr(0, 4),
+        this.city.City.t3.substr(0, 4)
+      ]
+    },
+    extentYears () {
+      return [
+        this.city.City.t1.substr(0, 4),
+        this.city.City.t2.substr(0, 4),
+        this.city.City.t2b.substr(0, 4),
+        this.city.City.t3.substr(0, 4)
+      ]
+    },
     layersFiltered() {
       return this.layers.filter(l => l.color);
     },
@@ -271,6 +275,30 @@ export default {
           checked: this.years[2].checked
         }
       ];
+    },
+    urban_extent_change_t1_t2_percent() {
+      return this.city.DataSet.urban_extent_change_t1_t2 + '%'
+    },
+    urban_extent_change_t2_t3_percent() {
+      return this.city.DataSet.urban_extent_change_t2_t3 + '%'
+    },
+    population_change_t1_t2_percent() {
+      return this.city.DataSet.population_change_t1_t2 + '%'
+    },
+    population_change_t2_t3_percent() {
+      return this.city.DataSet.population_change_t2_t3 + '%'
+    },
+    density_built_up_change_t1_t2_percent() {
+      return this.city.DataSet.density_built_up_change_t1_t2 + '%'
+    },
+    density_built_up_change_t2_t3_percent() {
+      return this.city.DataSet.density_built_up_change_t2_t3 + '%'
+    },
+    density_urban_extent_change_t1_t2_percent() {
+      return this.city.DataSet.density_urban_extent_change_t1_t2 + '%'
+    },
+    density_urban_extent_change_t2_t3_percent() {
+      return this.city.DataSet.density_urban_extent_change_t2_t3 + '%'
     }
   },
   mounted() {

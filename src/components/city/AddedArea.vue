@@ -14,7 +14,7 @@
           </div>
           <div class='map-key-layers '>
             <div class='row' v-for='layer in layers'>
-              <div class="col-2">
+              <div class="    col-2">
                 <span class='legend-item' v-bind:style='{ backgroundColor: layer.color }' />
               </div>
               <div class='col-10'>
@@ -31,17 +31,17 @@
         <h1 class="mt-5 mb-2">Composición del Área Agregada</h1>
         <div class="row pb-4 pt-4 mb-4 border-top border-bottom">
           <div class="col-4">
-            <big-num heading='1985-1998' number='737' units='Hectáreas' color='#ac2341'/>
+            <big-num heading='1985-1998' :number='this.city.DataSet.added_area_total_t1_t2' units='Hectáreas' color='#ac2341'/>
           </div>
           <div class="col-4 text-left">
-            <big-num heading='1998-2017' number='1,739' units='Hectáreas' color='#da8b40'/>
+            <big-num heading='1998-2017' :number='this.city.DataSet.added_area_total_t2_t3' units='Hectáreas' color='#da8b40'/>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
             <p>
-              Un total de 1.739 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo entre 2000 y 2018. De esa área edificada agregada, 31.4% fue relleno, 18.1% fue extensión, 13% fue crecimiento discontinuo y 37.5% fue inclusión.
-              Un total de 737 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo en el período anterior, entre 1990 y 2000. De esa área construida adicional, 24.9% fue relleno, 32.9% fue extensión, 18.0% fue crecimiento discontinuo y el 24.2% fue inclusión.
+              Un total de {{this.city.DataSet.added_area_total_t2_t3}} hectáreas de área edificada se agregó a la extensión urbana de Portoviejo entre 2000 y 2018. De esa área edificada agregada, {{this.city.DataSet.added_area_extension_t2_t3}}% fue relleno, {{this.city.DataSet.added_area_extension_percent_t2_t3}}% fue extensión, {{this.city.DataSet.added_area_leapfrog_percent_t2_t3}}% fue crecimiento discontinuo y {{this.city.DataSet.added_area_inclusion_percent_t2_t3}}% fue inclusión.
+              Un total de {{this.city.DataSet.added_area_total_t1_t2}} hectáreas de área edificada se agregó a la extensión urbana de Portoviejo en el período anterior, entre 1990 y 2000. De esa área construida adicional, {{this.city.DataSet.added_area_extension_t1_t2}}% fue relleno, {{this.city.DataSet.added_area_extension_percent_t1_t2}}% fue extensión, {{this.city.DataSet.added_area_leapfrog_percent_t1_t2}}% fue crecimiento discontinuo y el {{this.city.DataSet.added_area_inclusion_percent_t1_t2}}% fue inclusión.
             </p>
             <p>
               <span v-html='highlight("Relleno", "#ff01c4")' /> consiste en todos los píxeles agregados en el nuevo periodo que ocupan Espacio Abierto Urbanizado en la Huella Urbana del periodo inmediatamente anterior;
@@ -64,12 +64,13 @@
 <script>
 import { makeChart, makeStacked } from '../../assets/graphing.js'
 import BigNum from './BigNum'
+import {cities} from '../../assets/json/master'
 
 export default {
   name: "AddedArea",
   data() {
     return {
-      city: window.city,
+      city: cities[this.$route.params.city_slug],
       chartObjects: {},
       laterYear: true,
       host: '{s}.atlasofurbanexpansion.org',

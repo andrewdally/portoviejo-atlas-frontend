@@ -146,7 +146,7 @@ let charts = function (city) {
       ]
     },
     'arterial_roads': {
-      labels: ['Portoviejo', 'PMD', 'Mundo'],
+      labels: [city.City.name, 'PMD', 'Mundo'],
       datasets: [
         {
           label: 'Densidad de las todas Vías',
@@ -157,7 +157,7 @@ let charts = function (city) {
       ]
     },
     'arterial_roads_distance': {
-      labels: ['Portoviejo', 'PMD', 'Mundo'],
+      labels: [city.City.name, 'PMD', 'Mundo'],
       datasets: [
         {
           label: 'Ancho',
@@ -174,7 +174,7 @@ let charts = function (city) {
       ]
     },
     'blocks_and_plots_composition_special_stacked': {
-      labels: ['Portoviejo', 'PMD', 'Mundo'],
+      labels: [city.City.name, 'PMD', 'Mundo'],
       datasets: [
         {
           suffix: '_atomistic_',

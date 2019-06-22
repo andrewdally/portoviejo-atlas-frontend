@@ -6,8 +6,7 @@ String.prototype.replaceAll = function (search, replacement) {
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import Population from './components/city/Population.vue'
-import Density from './components/city/Density.vue'
+import City from './components/City.vue'
 import AddedArea from './components/city/AddedArea.vue'
 import Blocks from './components/city/Blocks.vue'
 import Forecasts from './components/city/Forecasts.vue'
@@ -26,16 +25,20 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/urban_extent', component: UrbanExtentPopulation, name: 'Huella Urbana y Densidad'},
-  { path: '/urban_composition', component: UrbanComposition, name: 'Composición Urbana'},
-  { path: '/added_area', component: AddedArea, name: 'Composición del Área Agredada'},
-  { path: '/population', component: Population, name: 'Población' },
-  { path: '/density', component: Density, name: 'Densidad' },
-  { path: '/blocks', component: Blocks, name: 'Manzanas y Lotes'},
-  { path: '/forecasts', component: Forecasts, name: 'Proyecciones'},
-  { path: '/roads', component: Roads, name: 'Vías'},
-  { path: '/arterials', component: Arterials, name: 'Vías Arteriales'},
-
+  {
+    path: '/ciudad/:city_slug',
+    component: City,
+    name: 'Ciudad',
+    children: [
+      { path: 'urban_extent', component: UrbanExtentPopulation, name: 'Huella Urbana y Densidad'},
+      { path: 'urban_composition', component: UrbanComposition, name: 'Composición Urbana'},
+      { path: 'added_area', component: AddedArea, name: 'Composición del Área Agredada'},
+      { path: 'blocks', component: Blocks, name: 'Manzanas y Lotes'},
+      { path: 'forecasts', component: Forecasts, name: 'Proyecciones'},
+      { path: 'roads', component: Roads, name: 'Vías'},
+      { path: 'arterials', component: Arterials, name: 'Vías Arteriales'}
+    ]
+  },
   { path: '/sobre', component: About, name: 'Sobre el proyecto'},
   { path: '/datos', component: Data, name: 'Datos'},
   { path: '/autores', component: Team, name: 'Autores'},

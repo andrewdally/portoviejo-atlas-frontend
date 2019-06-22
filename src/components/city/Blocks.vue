@@ -36,16 +36,16 @@
         </div>
         <div class="row border-bottom pb-4 mb-4">
           <div class="col-4">
-            <big-num heading='Pre 1990' number='2' units='Hectáreas' color='#ac2341'/>
+            <big-num heading='Pre 1990' :number='city.DataSet.blocks_plots_average_block_pre_1990' units='Hectáreas' color='#ac2341'/>
           </div>
           <div class="col-4 text-left">
-            <big-num heading='1990-2015' number='5' units='Hectáreas' color='#da8b40'/>
+            <big-num heading='1990-2015' :number='city.DataSet.blocks_plots_average_block_1990_2015' units='Hectáreas' color='#da8b40'/>
           </div>
         </div>
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              El tamaño promedio de las manzanas en el área de expansión de Portoviejo entre 1990 y 2015 era de 5 hectáreas, frente a 2 hectáreas en su área anterior a 1990.
+              El tamaño promedio de las manzanas en el área de expansión de Portoviejo entre 1990 y 2015 era de {{city.DataSet.blocks_plots_average_block_1990_2015}} hectáreas, frente a {{city.DataSet.blocks_plots_average_block_pre_1990}} hectáreas en su área anterior a 1990.
             </p>
           </div>
         </div>
@@ -76,8 +76,6 @@
             </p>
           </div>
         </div>
-
-
         <div class="row border-bottom pb-4 mb-4">
           <div class="col-lg-12">
             <h3>Porcentaje de Asentamientos en uso Residencial</h3>
@@ -86,7 +84,7 @@
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              El porcentaje de asentamientos en uso residencial en el área de expansión de Portoviejo entre 1990 y 2015 estaba compuesto por: asentamientos atomísticos con 73%; subdivisiones informales con 11.1%; subdivisiones formales con 13.4% y proyectos de vivienda con 2.7%.
+              El porcentaje de asentamientos en uso residencial en el área de expansión de Portoviejo entre 1990 y 2015 estaba compuesto por: asentamientos atomísticos con {{city.DataSet.blocks_and_plots_composition_atomistic_1990_2015}}%; subdivisiones informales con {{city.DataSet.blocks_and_plots_composition_informal_1990_2015}}%; subdivisiones formales con {{city.DataSet.blocks_and_plots_composition_formal_1990_2015}}% y proyectos de vivienda con {{city.DataSet.blocks_and_plots_composition_housing_1990_2015}}%.
             </p>
           </div>
         </div>
@@ -104,7 +102,7 @@
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              El promedio del tamaño de las manzanas del área de expansión formal de Portoviejo era de 210 m<sup>2</sup> entre 1990 y 2015, frente a 259 m<sup>2</sup> en su área anterior a 1990.
+              El promedio del tamaño de las manzanas del área de expansión formal de Portoviejo era de {{city.DataSet.blocks_plots_average_formal_plot_1990_2015}} m<sup>2</sup> entre 1990 y 2015, frente a {{city.DataSet.blocks_plots_average_formal_plot_pre_1990}} m<sup>2</sup> en su área anterior a 1990.
             </p>
           </div>
         </div>
@@ -121,13 +119,14 @@
 <script>
   import {makeChart, returnSpecialStacked, makeSpecialStacked, makeBlockChart} from '../../assets/graphing.js'
   import BigNum from './BigNum'
+  import {cities} from '../../assets/json/master'
 
   export default {
     name: 'Blocks',
     data () {
       return {
         chartObjects: {},
-        city: window.city,
+        city: cities[this.$route.params.city_slug],
         host: '{s}.atlasofurbanexpansion.org',
         years: [
           'Pre 1990',

@@ -88,28 +88,17 @@
 <script>
 import { makeChart, makeStacked } from '../../assets/graphing.js'
 import BigNum from './BigNum'
+import {cities} from '../../assets/json/master'
 
 export default {
   name: "UrbanComposition",
-  //props: ['section', 'city'],
   data() {
     return {
       extraLayersVisible: true,
-      city: window.city,
+      city: cities[this.$route.params.city_slug],
       chartObjects: {},
       laterYear: true,
       host: '{s}.atlasofurbanexpansion.org',
-      years: [
-        window.city.City.t1.substr(0, 4),
-        window.city.City.t2.substr(0, 4),
-        window.city.City.t3.substr(0, 4)
-      ],
-      extentYears: [
-        window.city.City.t1.substr(0, 4),
-        window.city.City.t2.substr(0, 4),
-        window.city.City.t3.substr(0, 4)
-      ],
-      compositionYear: window.city.City.t3.substr(0, 4),
       activeCompositionLayers: [
         "extent_??_urbanBuilt",
         "extent_??_suburbanBuilt",
@@ -149,6 +138,23 @@ export default {
     };
   },
   computed: {
+    compositionYear () {
+      return this.city.City.t3.substr(0, 4)
+    },
+    years () {
+      return [
+        this.city.City.t1.substr(0, 4),
+        this.city.City.t2.substr(0, 4),
+        this.city.City.t3.substr(0, 4)
+      ]
+    },
+    extentYears () {
+      return [
+        this.city.City.t1.substr(0, 4),
+        this.city.City.t2.substr(0, 4),
+        this.city.City.t3.substr(0, 4)
+      ]
+    },
     layersFiltered() {
       return this.layers.filter(l => l.color);
     },
@@ -170,6 +176,7 @@ export default {
     }
   },
   mounted() {
+    console.log('thiscity', this.city)
     this.launchGraphs();
     this.map = L.mapbox.map("mapbox", null, {
       center: [this.city.City.latitude, this.city.City.longitude],

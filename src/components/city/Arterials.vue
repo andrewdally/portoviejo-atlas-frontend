@@ -26,16 +26,16 @@
         </div>
         <div class="row border-bottom mb-4 pb-4">
           <div class="col-4">
-            <big-num heading='Pre 1990' number='3.76' units='km/km²' color='#ac2341'/>
+            <big-num heading='Pre 1990' :number='city.DataSet.arterial_roads_density_all_pre_1990' units='km/km²' color='#ac2341'/>
           </div>
           <div class="col-4">
-            <big-num heading='1990-2015' number='2.39' units='km/km²' color='#da8b40'/>
+            <big-num heading='1990-2015' :number='city.DataSet.arterial_roads_density_all_1990_2015' units='km/km²' color='#da8b40'/>
           </div>
         </div>
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 era de 2.39 km/km2, frente a 3.76 km/km2en su área anterior a 1990.
+              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 era de {{city.DataSet.arterial_roads_density_all_1990_2015}} km/km<sup>2</sup>, frente a {{city.DataSet.arterial_roads_density_all_pre_1990}} km/km<sup>2</sup> en su área anterior a 1990.
             </p>
           </div>
         </div>
@@ -52,16 +52,16 @@
         </div>
         <div class="row border-bottom mb-4 pb-4">
           <div class="col-4">
-            <big-num heading='Pre 1990' number='99.6%' color='#ac2341'/>
+            <big-num heading='Pre 1990' :number='walkingOne' color='#ac2341'/>
           </div>
           <div class="col-4">
-            <big-num heading='1990-2015' number='99.14%' color='#da8b40'/>
+            <big-num heading='1990-2015' :number='walkingTwo' color='#da8b40'/>
           </div>
         </div>
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              El porcentaje de área construida a distancia caminable de una vía arterial en el área de expansión de Portoviejo entre 1990 y 2015 era de 99.14%, frente a 99.6% en el área anterior a 1990.
+              El porcentaje de área construida a distancia caminable de una vía arterial en el área de expansión de Portoviejo entre 1990 y 2015 era de {{walkingTwo}}, frente a {{walkingOne}} en el área anterior a 1990.
             </p>
           </div>
         </div>
@@ -78,16 +78,16 @@
         </div>
         <div class="row border-bottom pb-4 mb-4">
           <div class="col-4">
-            <big-num heading='Pre 1990' number='84' units='meters' color='#ac2341'/>
+            <big-num heading='Pre 1990' :number='city.DataSet.arterial_roads_beeline_all_pre_1990' units='meters' color='#ac2341'/>
           </div>
           <div class="col-4">
-            <big-num heading='1990-2015' number='123' units='meters' color='#da8b40'/>
+            <big-num heading='1990-2015' :number='city.DataSet.arterial_roads_beeline_all_1990_2015' units='meters' color='#da8b40'/>
           </div>
         </div>
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              La distancia en línea recta a una vía arterial en Portoviejo era de 123 m entre 1990 y 2015.
+              La distancia en línea recta a una vía arterial en Portoviejo era de {{city.DataSet.arterial_roads_beeline_all_1990_2015}} m entre 1990 y 2015.
             </p>
           </div>
         </div>
@@ -105,12 +105,14 @@
 <script>
   import BigNum from './BigNum'
   import {returnRoadChartData, makeRoadChart} from '../../assets/graphing.js'
+  import {cities} from '../../assets/json/master'
+
   export default {
     name: 'Arterials',
     data () {
       return {
         chartObjects: {},
-        city: window.city,
+        city: cities[this.$route.params.city_slug],
         host: '{s}.atlasofurbanexpansion.org',
         years: [
           'Pre 1990',
@@ -126,15 +128,12 @@
         ]
       }
     },
-    computed: {
-      earlyRange () {
-       return this.city.City.t1.substr(0, 4) + '—' + this.city.City.t2.substr(0, 4)
-      },
-      laterRange () {
-       return this.city.City.t2.substr(0, 4) + '—' + this.city.City.t3.substr(0, 4)
-      }
+    beforeMount () {
+      //this.city = cities[this.$route.params.city_slug]
     },
     mounted () {
+      console.log('arterials.city', this.city)
+      //console.log('city', )
       this.launchGraphs()
       this.map = L.mapbox.map("mapbox", null, {
         center: [this.city.City.latitude, this.city.City.longitude],
@@ -165,7 +164,14 @@
     computed: {
       laterYear() {
         return this.selectYear === this.years[1]
+      },
+      walkingOne() {
+       return (this.city.DataSet.arterial_roads_walking_all_pre_1990 * 100) + '%'
+      },
+      walkingTwo() {
+       return (this.city.DataSet.arterial_roads_walking_all_1990_2015 * 100) + '%'
       }
+
     },
     methods: {
       btnClass(year) {
