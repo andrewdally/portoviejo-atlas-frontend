@@ -50,7 +50,7 @@
               <span v-html='highlight("Extensión", "#ff9b10")' /> consiste en todos los píxeles construidos agregados en el nuevo periodo que son contiguos a la Huella Urbana del periodo anterior.
             </p>
             <p>
-              <span v-html='highlight("Crecimiento", "#fe0000")' /> discontinuo consiste en todos los píxeles construidos agregados en el nuevo periodo que constituyen nuevos Clústeres Urbanos contiguos que no son adyacentes a la Huella Urbana de del periodo anterior o a nuevos clústeres, y;
+              <span v-html='highlight("Crecimiento discontinuo", "#fe0000")' /> consiste en todos los píxeles construidos agregados en el nuevo periodo que constituyen nuevos Clústeres Urbanos contiguos que no son adyacentes a la Huella Urbana de del periodo anterior o a nuevos clústeres, y;
             </p>
             <p>
               <span v-html='highlight("Inclusión", "#358866")' /> consiste en todos los píxeles construidos sea urbanos, rurales o suburbanos que estaban afuera de la Huella Urbana del periodo anterior y que ahora están en la Huella Urbana del nuevo periodo.

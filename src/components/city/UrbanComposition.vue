@@ -38,7 +38,7 @@
               La huella urbana se puede dividir en cuatro categorías de espacio:
               <span v-html='highlight("urbano", "#2300BD")' />,
               <span v-html='highlight("suburbano", "#C2799F")' />,
-              <span v-html='highlight("rural construido", "#000")' />, and
+              <span v-html='highlight("rural construido", "#000")' />, y
               <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' />.
             </p>
           </div>

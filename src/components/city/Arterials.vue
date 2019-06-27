@@ -35,7 +35,7 @@
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 era de 2.39 km/km2, frente a 3.76 km/km2en su área anterior a 1990.
+              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 era de 2.39 km/km², frente a 3.76 km/km² en su área anterior a 1990.
             </p>
           </div>
         </div>

@@ -73,16 +73,16 @@
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1985' number='93,426' color='#2e2e76'/>
+            <big-num class='mb-3' heading='1985' number='93,426' units='Personas' color='#2e2e76'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='1998' number='117,845' color='#ac2341'/>
+            <big-num class='mb-3' heading='1998' number='117,845' units='Personas' color='#ac2341'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num class='mb-3' heading='2007' number='170,854' color='#2FA3EB'/>
+            <big-num class='mb-3' heading='2007' number='170,854' units='Personas' color='#2FA3EB'/>
           </div>
           <div class='col-lg-6 col-md-3 col-sm-6'>
-            <big-num heading='2017' number='211,755' color='#da8b40'/>
+            <big-num heading='2017' number='211,755' units='Personas' color='#da8b40'/>
           </div>
         </div>
         <div class="row pb-4 pt-4 mb-4 border-bottom">
@@ -512,59 +512,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.mapbox-outer-wrap {
-  position: relative;
-  height: 100%;
-}
-.mapbox-inner-wrap {
-  height: calc(100vh - 56px);
-  position: fixed;
-  top: 56px;
-  right: 0;
-  padding: 0;
-  z-index: 1;
-}
-#mapbox {
-  height: 100%;
-  width: 100%;
-}
-#cityData {
-  background: white;
-  margin-right: -30px;
-  z-index: 3;
-  margin-top: 100vh;
-}
-@media (min-width: 992px) {
-  #cityData {
-    margin-top: 56px;
-  }
-}
-
-/*
-.map-key-year {
-  position: relative;
-  text-indent: 15px;
-  display: block;
-  cursor: pointer;
-  user-select: none;
-  cursor: pointer;
-}
-.map-key-year input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.map-key-year .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #f5f5f5;
-}
-*/
-</style>

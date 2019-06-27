@@ -60,7 +60,7 @@
         <div class="row pt-2 pb-3 mb-4 border-bottom">
           <div class="col-12">
             <p>
-              La proporción del área edificada en Portoviejo ocupada por carreteras en el área de expansión 1990-2015 fue de 27%, en comparación con 26% en al área anterior a 1985.
+              La proporción del área edificada en Portoviejo ocupada por carreteras en el área de expansión 1985-2017 fue de 10%, cifra exactamente igual en comparación al área anterior a 1985.
             </p>
           </div>
         </div>

@@ -1,57 +1,70 @@
 <template>
   <div id="app">
     <div class="container-fluid">
-      <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
-        </div>
-        <nav class="navbar navbar-expand-xl fixed-top navbar-light bg-light">
-          <a class="navbar-brand" href="/">Huella Urbana Portoviejo</a>
-          <div v-if='isCity()' class="navbar-nav">
-            <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ $route.name ? $route.name : 'Seleccione una Base de Datos' }}
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a href='/' class='dropdown-item'>Inicio</a>
-                <router-link to="/urban_extent" class="dropdown-item">Huella Urbana y Densidad</router-link>
-                <router-link to="/urban_composition" class="dropdown-item">Composición Urbana</router-link>
-                <router-link to="/added_area" class="dropdown-item">Área Agredada</router-link>
-                <router-link to="/roads" class="dropdown-item">Vías</router-link>
-                <router-link to="/arterials" class="dropdown-item">Vías Arteriales</router-link>
-                <router-link to="/blocks" class="dropdown-item">Manzanas y Lotes</router-link>
-                <router-link to="/forecasts" class="dropdown-item">Proyecciones</router-link>
-              </div>
-            </div>
-          </div> <!-- End of navbar-nav -->
-          <div class="navbar-nav ml-auto">
-            <div class='nav-item dropdown'>
-              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-              </a>
-              <div class='dropdown-menu dropdown-menu-right'>
-                <router-link to="/sobre" class="dropdown-item">Sobre el proyecto</router-link>
-                <router-link to="/datos" class="dropdown-item">Datos</router-link>
-                <router-link to="/autores" class="dropdown-item">Autores</router-link>
-                <router-link to="/metodologia" class="dropdown-item">Metodología y Fuentes</router-link>
-                <router-link to="/gratitud" class="dropdown-item">Expresiones de gratitud</router-link>
-              </div>
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="/">Huella Urbana Portoviejo</a>
+        <div v-if='isCity()' class="navbar-nav">
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ $route.name ? $route.name : 'Seleccione una Base de Datos' }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href='/' class='dropdown-item'>Inicio</a>
+              <router-link to="/urban_extent" class="dropdown-item">Huella Urbana y Densidad</router-link>
+              <router-link to="/urban_composition" class="dropdown-item">Composición Urbana</router-link>
+              <router-link to="/added_area" class="dropdown-item">Área Agredada</router-link>
+              <router-link to="/roads" class="dropdown-item">Vías</router-link>
+              <router-link to="/arterials" class="dropdown-item">Vías Arteriales</router-link>
+              <router-link to="/blocks" class="dropdown-item">Manzanas y Lotes</router-link>
+              <router-link to="/forecasts" class="dropdown-item">Proyecciones</router-link>
             </div>
           </div>
-        </nav>
-      </div>
-      <div v-if='!$route.name' id='city-home' class='row'>
-        <div class='col-sm-4 mb-5 text-center'>
-          <big-num heading='2017 Huella Urbana' number='5,176' units='Hectáreas' color='#fff'/>
+        </div> <!-- End of navbar-nav -->
+        <div class="navbar-nav ml-auto">
+          <div class='nav-item dropdown'>
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </a>
+            <div class='dropdown-menu dropdown-menu-right'>
+              <router-link to="/sobre" class="dropdown-item">Sobre el proyecto</router-link>
+              <router-link to="/datos" class="dropdown-item">Datos</router-link>
+              <router-link to="/autores" class="dropdown-item">Autores</router-link>
+              <router-link to="/metodologia" class="dropdown-item">Metodología y Fuentes</router-link>
+              <router-link to="/gratitud" class="dropdown-item">Expresiones de gratitud</router-link>
+            </div>
+          </div>
         </div>
-        <div class='col-sm-4 mb-5 text-center'>
-          <big-num heading='2017 Población' number='211,755' color='#fff'/>
+      </nav>
+        <div class="row">
+          <div id="logos" class="table-responsive">
+            <table class="table table-borderless table-light">
+              <tr style="width: 100%">
+                <td style="width:33%" class="text-center">
+                  <img class="align-middle" src="img/caf-logo.png" />
+                </td>
+                <td style="width:33%" class="text-center">
+                  <img class="align-middle" style="max-height: 45px;" src="img/marron-logo.png" />
+                </td>
+                <td style="width:33%" class="text-center">
+                  <img class="align-middle" src="img/portoviejo-logo.png" />
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
-        <div class='col-sm-4 mb-5 text-center'>
-          <big-num heading='2017 Densidad' number='68' units='personas/hectárea' color='#fff'/>
+      <div v-if='!$route.name' class="row">
+        <div class="col-12">
+          <div id="city-home" class='row'>
+            <div class='col-sm-4 mb-5 text-center'>
+              <big-num heading='2017 Huella Urbana' number='5,176' units='Hectáreas' color='#fff'/>
+            </div>
+            <div class='col-sm-4 mb-5 text-center'>
+              <big-num heading='2017 Población' number='211,755' units='Personas' color='#fff'/>
+            </div>
+            <div class='col-sm-4 mb-5 text-center'>
+              <big-num heading='2017 Densidad' number='68' units='personas/hectárea' color='#fff'/>
+            </div>
+          </div>
         </div>
       </div>
       <router-view></router-view>
@@ -94,16 +107,28 @@ body {
   background-size: cover;
 }
 #city-home {
-  padding-top: 50vh;
-  .bigNum {
-    color: white !important;
-    display: inline-block;
-    height: 100%
-  }
+  margin-top: 40vh;
 }
+#city-home .bigNum {
+  color: white !important;
+  display: inline-block;
+  height: 100%;
+}
+
+#logos img {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+}
+#logos {
+  position: fixed;
+  top: 56px;
+  z-index: 100;
+}
+
 @media (max-width: 576px) {
-  #city-home {
-    padding-top: 25vh;
+  #logos {
+    margin-bottom: 25vh;
   }
 }
 .btn-1985, .btn-1998, .btn-2007, .btn-2017{
@@ -150,12 +175,12 @@ body {
   position: absolute;
   top: -1500px;
 }
-.navbar-expand-sm .navbar-toggler {
+.navbar-expand .navbar-toggler {
   display: block;
 }
 #infoPage {
   background: white;
-  margin-top: 56px;
+  margin-top: 120px;
   min-height: 100vh;
 }
 #cityData {
@@ -163,10 +188,11 @@ body {
   margin-right: -30px;
   z-index: 3;
   margin-top: 100vh;
+  margin-top: 120px;
 }
 @media (min-width: 992px) {
   #cityData {
-    margin-top: 56px;
+    margin-top: 120px;
   }
 }
 .legend-item {
@@ -180,7 +206,7 @@ body {
   padding: 5px;
   font-size: 13px;
   position: fixed;
-  top: 80px;
+  top: 160px;
   right: 20px;
   width: 210px;
   z-index: 2;
