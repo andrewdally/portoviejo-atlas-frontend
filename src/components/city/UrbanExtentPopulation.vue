@@ -39,7 +39,7 @@
           <div class="col-md-6 col-lg-12">
             <p>
               La huella urbana de Portoviejo en 2017 fue de 5.176 hectáreas, aumentando a una tasa promedio anual de 4,45% desde 1998.
-              La huella urbana en 1.998 fue de 2.254 hectáreas, aumentando a una tasa promedio anual de 4,95% desde 1.985, cuando su huella urbana era  de 1.115 hectáreas
+              La huella urbana en 1998 fue de 2.254 hectáreas, aumentando a una tasa promedio anual de 4,95% desde 1985, cuando su huella urbana era  de 1.115 hectáreas
             </p>
           </div>
           <div class="col-md-6 col-lg-12">
@@ -93,8 +93,8 @@
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-12'>
             <p>
-              La población de Portoviejo en 2.018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2.000.
-              La población de Portoviejo en 2.018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2.000.
+              La población de Portoviejo en 2018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2000.
+              La población de Portoviejo en 2018 era de 211.755 personas, aumentando a una tasa anual promedio de 3,1% desde 2000.
             </p>
           </div>
         </div>
@@ -143,8 +143,8 @@
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-12'>
             <p>
-              La densidad del área edificada en Portoviejo en 2.017 fue de 68 personas por hectárea, disminuyendo a una tasa promedio anual de -1,41% desde 1.998.
-              La densidad del área edificada en 1.998 fue de 89 personas por hectárea, disminuyendo a una tasa promedio anual de -4,1% desde 1.985 cuando la densidad del área construida era de 154 personas por hectárea.
+              La densidad del área edificada en Portoviejo en 2017 fue de 68 personas por hectárea, disminuyendo a una tasa promedio anual de -1,41% desde 1998.
+              La densidad del área edificada en 1998 fue de 89 personas por hectárea, disminuyendo a una tasa promedio anual de -4,1% desde 1985 cuando la densidad del área construida era de 154 personas por hectárea.
             </p>
           </div>
         </div>
@@ -193,8 +193,8 @@
         <div class="row pb-4 pt-4 mb-4 border-bottom">
           <div class='col-12'>
             <p>
-              La densidad de la huella urbana en Portoviejo en 2.017 fue de 42,3 personas por hectárea, disminuyendo a una tasa promedio anual de -1,14% desde 1.998.
-              La densidad de la huella urbana en 1.998 fue de 52,3 personas por hectárea, disminuyendo a una tasa promedio anual de -3,23 % desde 1.985 cuando la densidad de la huella urbana era de 80,9 personas por hectárea.
+              La densidad de la huella urbana en Portoviejo en 2017 fue de 42,3 personas por hectárea, disminuyendo a una tasa promedio anual de -1,14% desde 1998.
+              La densidad de la huella urbana en 1998 fue de 52,3 personas por hectárea, disminuyendo a una tasa promedio anual de -3,23 % desde 1985 cuando la densidad de la huella urbana era de 80,9 personas por hectárea.
             </p>
           </div>
         </div>

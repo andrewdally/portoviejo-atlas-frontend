@@ -17,6 +17,7 @@ import Roads from './components/city/Roads.vue'
 import Arterials from './components/city/Arterials.vue'
 
 import About from './components/info/About.vue'
+import Contact from './components/info/Contact.vue'
 import Data from './components/info/Data.vue'
 import Team from './components/info/Team.vue'
 import Methodology from './components/info/Methodology.vue'
@@ -37,6 +38,7 @@ const routes = [
   { path: '/arterials', component: Arterials, name: 'Vías Arteriales'},
 
   { path: '/sobre', component: About, name: 'Sobre el proyecto'},
+  { path: '/contacto', component: Contact, name: 'Contacto'},
   { path: '/datos', component: Data, name: 'Datos'},
   { path: '/autores', component: Team, name: 'Autores'},
   { path: '/metodologia', component: Methodology, name: 'Metodología y Fuentes'},

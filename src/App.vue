@@ -28,6 +28,7 @@
             <div class='dropdown-menu dropdown-menu-right'>
               <router-link to="/sobre" class="dropdown-item">Sobre el proyecto</router-link>
               <router-link to="/datos" class="dropdown-item">Datos</router-link>
+              <router-link to="/contacto" class="dropdown-item">Contacto</router-link>
               <router-link to="/autores" class="dropdown-item">Autores</router-link>
               <router-link to="/metodologia" class="dropdown-item">Metodología y Fuentes</router-link>
               <router-link to="/gratitud" class="dropdown-item">Expresiones de gratitud</router-link>
