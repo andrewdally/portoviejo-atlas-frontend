@@ -18,15 +18,15 @@
               </p>
 
               <p>
-                En el marco del objetivo estratégico para generar acciones de mitigación, adaptación al cambio climático y fomento de la protección del medio ambiente, la Agencia Francesa de Desarrollo (AFD) y el Banco de Desarrollo de América Latina (CAF) firmaron el convenio LAIF sobre Ciudades y Cambio Climático en América Latina. Esta iniciativa tiene como objetivo la promoción de un desarrollo bajo en carbono y resiliente al cambio climático en las ciudades de países de América Latina a través del (i) fortalecimiento de las herramientas climáticas de CAF, para que los aspectos climáticos sean más integrados en el proceso de financiación de proyectos; (ii) la sensibilización de los gobiernos locales de América Latina sobre aspectos del cambio climático y el fortalecimiento de sus capacidades en la definición e implementación de planes de desarrollo bajo en carbono y resiliente al cambio climático y; (iii) la identificación y financiación de proyectos urbanos con “co-beneficios climáticos” en países de la región.
+                Esta iniciativa tiene como objetivo promover el desarrollo bajo en carbono y resiliente al cambio climático en las ciudades de países de América Latina a través del (i) fortalecimiento de las herramientas climáticas de CAF, para integrar mejor los aspectos climáticos en el proceso de financiación de proyectos; (ii) la sensibilización de los gobiernos locales de América Latina sobre aspectos del cambio climático y el fortalecimiento de sus capacidades en la definición e implementación de planes de desarrollo bajos en carbono y resilientes al cambio climático y; (iii) la identificación y financiación de proyectos urbanos con “co-beneficios climáticos” en países de la región.
               </p>
 
               <p>
-                En este sentido se contrato el desarrollo de una consultoría cuyo objetivo principal es realizar los estudios ambientales para establecer el diagnóstico climático del municipio de Portoviejo, Ecuador. Estos estudios deberán incluir: (i) el análisis del crecimiento de la huella urbana (tendencia histórica, actual y escenarios futuros), (ii) el análisis de vulnerabilidad y riesgo climático por zonas, que contenga las dimensiones ambiental, económica y social así como un análisis sectorial, de tal manera que incida en un aumento de la resiliencia de la ciudad ante eventos extremos del cambio climático y/o variabilidad climática, (iii) el inventario de gases tipo efecto invernadero del territorio.
+                En este sentido, se contrató el desarrollo de una consultoría cuyo objetivo principal es realizar una serie de estudios que permiten establecer un diagnóstico del municipio de Portoviejo en relación con el Cambio Climático. Estos estudios incluyeron: (i) el análisis del crecimiento de la huella urbana (tendencia histórica, actual y escenarios futuros), (ii) el análisis de vulnerabilidad y riesgo frente a la variabilidad y el cambio climático, (iii) el inventario de gases de efecto invernadero generados en el territorio.
               </p>
 
               <p>
-                Para el desarrollo del primer estudio se encargará NYU, para el segundo CIIFEN y para el tercero Factor. En general los productos incluyen el análisis de la huella urbana actual e histórica y escenarios de crecimiento urbano.
+                El primer estudio fue desarrollado por NYU, el segundo estudio fue desarrollado por CIIFEN y el tercer estudio fue desarrollado por Factor. Los productos incluyen el análisis de la huella urbana actual e histórica y escenarios de crecimiento urbano.
               </p>
 
               <p>

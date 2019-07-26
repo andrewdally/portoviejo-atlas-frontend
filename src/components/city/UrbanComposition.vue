@@ -33,13 +33,6 @@
           <div class="col-12">
             <p>
               El mapa describe las cuatro categorías que componen el área urbana de la ciudad de Portoviejo y cómo estas han evolucionado a lo largo de los cuatro periodos de estudio.
-              <br>
-              <br>
-              La huella urbana se puede dividir en cuatro categorías de espacio:
-              <span v-html='highlight("urbano", "#2300BD")' />,
-              <span v-html='highlight("suburbano", "#C2799F")' />,
-              <span v-html='highlight("rural construido", "#000")' />, y
-              <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' />.
             </p>
           </div>
         </div>
@@ -53,19 +46,25 @@
         <div class="row border-bottom border-top">
           <div class="col-12 pt-4 mb-4">
             <p>
-              En cuatro tipos: urbanos, suburbanos, rurales y el espacio abierto urbanizado  — dependiendo de la proporción de píxeles construidos dentro de lo que denominamos el Círculo de Caminabilidad— definido como un círculo con un área de un km<sup>2</sup> y un radio de 584 metros, en el que todos los puntos se encuentran a una distancia alcanzable a pie en aproximadamente diez minutos — alrededor de cada uno de ellos:
+              La huella urbana se puede dividir en cuatro categorías de espacio:
+              <span v-html='highlight("urbano", "#2300BD")' />,
+              <span v-html='highlight("suburbano", "#C2799F")' />,
+              <span v-html='highlight("rural construido", "#000")' />, y
+              <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' />
+              según la proporción de píxeles construidos dentro dentro de un Círculo de Caminabilidad— definido como un círculo con un área de un km<sup>2</sup> y un radio de 584 metros, en donde todos los puntos podrán ser alcanzados a pie en aproximadamente diez minutos.
             </p>
             <p>
-              Los píxeles <span v-html='highlight("urbanos", "#2300BD")' /> son píxeles con la mayoría de píxeles construidos (50% o más) en su círculo de caminabilidad;
+              Los píxeles <span v-html='highlight("urbanos", "#2300BD")' /> tienen 50% o más de píxeles construidos en su círculo de caminabilidad;
             </p>
             <p>
-              Los píxeles <span v-html='highlight("suburbanos", "#C2799F")' /> son píxeles aquellos que tienen un 25-50% de píxeles construidos en su círculo de caminabilidad; y
+              Los píxeles <span v-html='highlight("suburbanos", "#C2799F")' /> tienen 25-50% de píxeles construidos en su círculo de caminabilidad;
             </p>
             <p>
-              Los píxeles <span v-html='highlight("rurales", "#000")' /> son píxeles con menos del 25% de píxeles construidos en su círculo de caminabilidad.
+              Los píxeles <span v-html='highlight("rurales", "#000")' /> tienen menos del 25% de píxeles construidos en su círculo de caminabilidad.
             </p>
             <p>
-              El <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' /> son áreas sin edificar y zonas verdes desarrolladas que incluye:
+              El <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' /> on áreas sin edificar y zonas verdes desarrolladas.
+              Esta categoría incluye:
             </p>
             <ul>
               <li>Campo abierto </li>
@@ -76,9 +75,6 @@
               <li>Suelo deforestado</li>
               <li>Cuerpos de agua: mares, ríos, lagos y canales</li>
             </ul>
-            </p>
-              El espacio abierto marginal consta de todos los píxeles de espacio abierto a menos de 100 metros de píxeles urbanos o suburbanos; y el espacio abierto capturado consta de todos los grupos de espacio abierto que están completamente rodeados por píxeles urbanos y suburbanos del área construida y los píxeles de espacio abierto que los rodean, y que tienen menos de 200 hectáreas de área.
-            </p>
           </div>
         </div>
       </div>

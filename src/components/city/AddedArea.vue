@@ -40,20 +40,21 @@
         <div class="row">
           <div class="col-lg-12">
             <p>
-              Un total de 1.739 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo entre 2000 y 2018. De esa área edificada agregada, 31.4% fue relleno, 18.1% fue extensión, 13% fue crecimiento discontinuo y 37.5% fue inclusión.
-              Un total de 737 hectáreas de área edificada se agregó a la extensión urbana de Portoviejo en el período anterior, entre 1990 y 2000. De esa área construida adicional, 24.9% fue relleno, 32.9% fue extensión, 18.0% fue crecimiento discontinuo y el 24.2% fue inclusión.
+              Un total de 1.739 hectáreas de área edificada se agregó al área urbana de Portoviejo entre 2000 y 2018. De esta área edificada agregada, 31.4% fue relleno, 18.1% fue extensión, 13% fue crecimiento discontinuo y 37.5% fue inclusión.
+              <br><br>
+              Un total de 737 hectáreas de área edificada se agregó al área urbana de Portoviejo en el período anterior, entre 1990 y 2000. De esta área área edificada agregada, 24.9% fue relleno, 32.9% fue extensión, 18.0% fue crecimiento discontinuo y el 24.2% fue inclusión.
             </p>
             <p>
-              <span v-html='highlight("Relleno", "#ff01c4")' /> consiste en todos los píxeles agregados en el nuevo periodo que ocupan Espacio Abierto Urbanizado en la Huella Urbana del periodo inmediatamente anterior;
+              Los pixeles agregados por <span v-html='highlight("Relleno", "#ff01c4")' /> son pixeles  que ocupan Espacio Abierto Urbanizado en la Huella Urbana del periodo anterior;
             </p>
             <p>
-              <span v-html='highlight("Extensión", "#ff9b10")' /> consiste en todos los píxeles construidos agregados en el nuevo periodo que son contiguos a la Huella Urbana del periodo anterior.
+              Los pixeles agregados por <span v-html='highlight("Extensión", "#ff9b10")' /> son pixeles contiguos a la Huella Urbana del periodo anterior.
             </p>
             <p>
-              <span v-html='highlight("Crecimiento discontinuo", "#fe0000")' /> consiste en todos los píxeles construidos agregados en el nuevo periodo que constituyen nuevos Clústeres Urbanos contiguos que no son adyacentes a la Huella Urbana de del periodo anterior o a nuevos clústeres, y;
+              Los pixeles agregados por <span v-html='highlight("Crecimiento discontinuo", "#fe0000")' /> son pixeles que constituyen nuevos Clústeres Urbanos próximos (contiguos) pero no unidos (no adyacentes) a la Huella Urbana de del periodo anterior o a otros clústeres urbanos existentes.
             </p>
             <p>
-              <span v-html='highlight("Inclusión", "#358866")' /> consiste en todos los píxeles construidos sea urbanos, rurales o suburbanos que estaban afuera de la Huella Urbana del periodo anterior y que ahora están en la Huella Urbana del nuevo periodo.
+              Los pixeles agregados por <span v-html='highlight("Inclusión", "#358866")' /> consiste en todos los píxeles construidos sea urbanos, rurales o suburbanos que estaban afuera de la Huella Urbana del periodo anterior y que ahora están en la Huella Urbana del nuevo periodo.
             </p>
           </div>
         </div>

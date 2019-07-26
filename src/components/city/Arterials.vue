@@ -35,7 +35,7 @@
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 era de 2.39 km/km², frente a 3.76 km/km² en su área anterior a 1990.
+              La densidad de vías arteriales en el área de expansión de Portoviejo entre 1990 y 2015 es de 2.39 km/km<sup>2</sup>, frente a 3.76 km/km<sup>2</sup> en el área urbana anterior a 1990.
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              El porcentaje de área construida a distancia caminable de una vía arterial en el área de expansión de Portoviejo entre 1990 y 2015 era de 99.14%, frente a 99.6% en el área anterior a 1990.
+              El porcentaje de área construida a distancia caminable de una vía arterial en el área de expansión de Portoviejo entre 1990 y 2015 es de 99.14%, frente a 99.6% en el área anterior a 1990.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@
         <div class="row border-bottom mb-4 pt-2 pb-3">
           <div class="col-12">
             <p>
-              La distancia en línea recta a una vía arterial en Portoviejo era de 123 m entre 1990 y 2015.
+              La distancia en línea recta a una vía arterial en Portoviejo es de 123 m entre 1990 y 2015.
             </p>
           </div>
         </div>

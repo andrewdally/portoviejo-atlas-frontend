@@ -35,7 +35,7 @@
         <div class="row pt-2 pb-3 mb-4 border-bottom">
           <div class="col-12">
             <p>
-              El ancho promedio de las vías en el área de expansión de Portoviejo durante 1990-2015 fue de 8.74 metros, en comparación con 10.4 metros en su área anterior a 1985.
+              El ancho promedio de las vías en el área de expansión de Portoviejo durante 1990-2015 es de 8.74 metros, frente a 10.4 metros en el área urbana anterior a 1990.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@
         <div class="row pt-2 pb-3 mb-4 border-bottom">
           <div class="col-12">
             <p>
-              La proporción del área edificada en Portoviejo ocupada por carreteras en el área de expansión 1985-2017 fue de 10%, cifra exactamente igual en comparación al área anterior a 1985.
+              La proporción del área edificada en Portoviejo ocupada por vías en el área de expansión 1990-2015 es de 27%, frente a 26% en el área área urbana anterior a 1990.
             </p>
           </div>
         </div>

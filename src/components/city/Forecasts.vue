@@ -32,10 +32,13 @@
         <div class="row pb-4 pt-4 border-top border-bottom">
           <div class="col-12">
             <p>
-              A partir de las tendencias del crecimiento de población desarrolladas por el INE se construyeron tres escenarios para determinar el posible crecimiento tanto del área construida como el de la Huella Urbana de Portoviejo.
-              <br>
-              <br>
-              Cada uno de los escenarios, tienen en cuenta tres variables: (i) la sensibilidad a la construcción en pendiente que se puede observar en la ciudad, (ii) las áreas de reserva y (iii) la tendencia de cambio en la densidad. Precisamente por que se usan tres tendencias de cambio de densidad diferente es que se tienen tres escenarios. La primera tendencia refleja una densidad constante, la segunda tendencia refleja el cambio promedio de la densidad que ha registrado la ciudad y la tercera tendencia refleja el cambio promedio de la densidad que ha registrado el mundo.
+              A partir de las tendencias del crecimiento de población desarrolladas por el INE se construyeron tres escenarios para determinar el posible crecimiento tanto del área construida como de la Huella Urbana de Portoviejo.
+            </p>
+            <p>
+              Cada uno de los escenarios, tienen en cuenta tres variables: (i) la sensibilidad a la construcción observada en la ciudad, (ii) las áreas de reserva y (iii) la tendencia de cambio en la densidad.
+            </p>
+            <p>
+              Para este estudio se utilizaron tres tendencias de cambio de densidad, por lo cual  se obtienen tres escenarios de crecimiento urbano diferentes. La primera tendencia refleja el crecimiento urbano esperado con una densidad constante.  La segunda tendencia refleja el crecimiento urbano esperado con la tasa de cambio promedio de densidad registrada históricamente en la ciudad de Portoviejo. La tercera tendencia refleja el crecimiento urbano esperado con la tasa de el cambio promedio de la densidad registrada a nivel mundial.
             </p>
           </div>
         </div>
