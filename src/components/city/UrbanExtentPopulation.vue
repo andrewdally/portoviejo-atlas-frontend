@@ -278,13 +278,14 @@ export default {
     this.map = L.mapbox.map("mapbox", null, {
       center: [this.city.City.latitude, this.city.City.longitude],
       reuseTiles: true,
-      zoom: 13,
+      zoom: 12,
       zoomControl: false,
       scrollWheelZoom: false,
-      scrollZoom: false
+      scrollZoom: false,
+      tap: false
     });
-
-    new L.Control.Zoom({ position: "bottomright" }).addTo(this.map);
+    console.log('map', this.map)
+    new L.Control.Zoom({ position: "topleft" }).addTo(this.map);
 
     this.lightBG = L.mapbox
       .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")

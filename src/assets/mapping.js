@@ -9,7 +9,7 @@ export var setMap = function (city, zoom=11) {
   });
 
 
-  new L.Control.Zoom({ position: "bottomright" }).addTo(map);
+  new L.Control.Zoom({ position: "topleft" }).addTo(map);
 
   L.mapbox
     .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")

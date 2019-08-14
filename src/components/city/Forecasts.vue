@@ -128,10 +128,11 @@
         reuseTiles: true,
         zoom: 12,
         zoomControl: false,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        tap: false
       });
 
-      new L.Control.Zoom({ position: "bottomright" }).addTo(this.map);
+      new L.Control.Zoom({ position: "topleft" }).addTo(this.map);
 
       this.lightBG = L.mapbox
         .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")

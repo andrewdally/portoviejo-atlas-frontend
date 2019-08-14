@@ -73,7 +73,7 @@
         </div>
         <div class="row border-bottom pb-2 mb-5">
           <div class="col-12 pb-4">
-            <h3>Distancia en Linea Recta a Vías Arteriales</h3>
+            <h3>Distancia en Línea Recta a Vías Arteriales</h3>
           </div>
         </div>
         <div class="row border-bottom pb-4 mb-4">
@@ -141,10 +141,11 @@
         reuseTiles: true,
         zoom: 12,
         zoomControl: false,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        tap: false
       });
 
-      new L.Control.Zoom({ position: "bottomright" }).addTo(this.map);
+      new L.Control.Zoom({ position: "topleft" }).addTo(this.map);
 
       this.lightBG = L.mapbox
         .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")

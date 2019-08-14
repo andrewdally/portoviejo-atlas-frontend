@@ -122,10 +122,11 @@ export default {
       reuseTiles: true,
       zoom: 13,
       zoomControl: false,
-      scrollWheelZoom: false
+      scrollWheelZoom: false,
+      tap: false
     });
 
-    new L.Control.Zoom({ position: "bottomright" }).addTo(this.map);
+    new L.Control.Zoom({ position: "topleft" }).addTo(this.map);
     this.satBG = L.mapbox
       .styleLayer('mapbox://styles/willcmccusker/cj1s0rv49000w2sqm46rsl141')
         .addTo(this.map)

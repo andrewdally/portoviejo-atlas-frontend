@@ -12,7 +12,7 @@
               <input type="radio" v-model='selectYear' v-bind:value='year' v-bind:id='year + "_check"'> {{year}}
             </label>
           </div>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled map-key-layers">
             <li class='row mb-1' v-for='item in legend'>
               <div class="col-2">
                 <span class='legend-item' v-bind:style='{ backgroundColor: item.color }' />
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div id="cityData" class="col-lg-6 order-first">
-        <h1 class="mt-5 pb-4 mb-2">Tamaño promedio de un lote</h1>
+        <h1 class="mt-5 pb-4 mb-2">Manzanas y Lotes</h1>
         <div class="row pb-2 pt-4 mb-4 border-top border-bottom">
           <div class="col-12 mb-2">
             <h3>Tamaño de Manzana</h3>
@@ -54,6 +54,11 @@
             <canvas id='blocks_plots_average_block_bar' />
           </div>
         </div>
+        <div class="row border-bottom pb-4 mb-4">
+          <div class="col-lg-12">
+            <h3>Porcentaje de Asentamientos en uso Residencial</h3>
+          </div>
+        </div>
         <div class="row pt-4 pb-4 mb-4 border-bottom">
           <div class="col-lg-12">
             <p>
@@ -74,17 +79,6 @@
             <p>
               Estas cuatro categorías pretenden reflejar el grado de complejidad de la esfera económica conocida como sector inmobiliario. El sector inmobiliario alcanza su nivel más básico en las áreas de viviendas atomizadas, en donde la organización del sector de viviendas es insuficiente, incluso para asegurar tamaños de lotes y anchos de vías consistentes.
             </p>
-          </div>
-        </div>
-
-
-        <div class="row border-bottom pb-4 mb-4">
-          <div class="col-lg-12">
-            <h3>Porcentaje de Asentamientos en uso Residencial</h3>
-          </div>
-        </div>
-        <div class="row border-bottom mb-4 pt-2 pb-3">
-          <div class="col-12">
             <p>
               El porcentaje de asentamientos en uso residencial en el área de expansión de Portoviejo entre 1990 y 2015 estaba compuesto por: asentamientos atomísticos con 73%; subdivisiones informales con 11.1%; subdivisiones formales con 13.4% y proyectos de vivienda con 2.7%.
             </p>
@@ -108,7 +102,7 @@
             </p>
           </div>
         </div>
-        <div class="row border-bottom pt-4 pb-4 mb-4">
+        <div class="row pt-4 pb-4 mb-4">
           <div class="col-lg-12 pb-5">
             <canvas id='blocks_plots_average_bar' />
           </div>
@@ -165,10 +159,11 @@
         reuseTiles: true,
         zoom: 13,
         zoomControl: false,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        tap: false
       });
 
-      new L.Control.Zoom({ position: "bottomright" }).addTo(this.map);
+      new L.Control.Zoom({ position: "topleft" }).addTo(this.map);
 
       this.satBG = L.mapbox
         .styleLayer('mapbox://styles/willcmccusker/cj1s0rv49000w2sqm46rsl141')

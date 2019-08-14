@@ -63,7 +63,7 @@
               Los píxeles <span v-html='highlight("rurales", "#000")' /> tienen menos del 25% de píxeles construidos en su círculo de caminabilidad.
             </p>
             <p>
-              El <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' /> on áreas sin edificar y zonas verdes desarrolladas.
+              El <span v-html='highlight("espacio abierto urbanizado", "#FFFB29", "black")' /> son áreas sin edificar y zonas verdes desarrolladas.
               Esta categoría incluye:
             </p>
             <ul>
@@ -98,11 +98,7 @@ export default {
       years: [
         window.city.City.t1.substr(0, 4),
         window.city.City.t2.substr(0, 4),
-        window.city.City.t3.substr(0, 4)
-      ],
-      extentYears: [
-        window.city.City.t1.substr(0, 4),
-        window.city.City.t2.substr(0, 4),
+        window.city.City.t2b.substr(0, 4),
         window.city.City.t3.substr(0, 4)
       ],
       compositionYear: window.city.City.t3.substr(0, 4),
@@ -148,22 +144,6 @@ export default {
     layersFiltered() {
       return this.layers.filter(l => l.color);
     },
-    yearsComputed() {
-      return [
-        {
-          display: this.city.City.t1.substr(0, 4),
-          checked: this.years[0].checked
-        },
-        {
-          display: this.city.City.t2.substr(0, 4),
-          checked: this.years[1].checked
-        },
-        {
-          display: this.city.City.t3.substr(0, 4),
-          checked: this.years[2].checked
-        }
-      ];
-    }
   },
   mounted() {
     this.launchGraphs();
@@ -172,10 +152,11 @@ export default {
       reuseTiles: true,
       zoom: 13,
       zoomControl: false,
-      scrollWheelZoom: false
+      scrollWheelZoom: false,
+      tap: false
     });
 
-    new L.Control.Zoom({ position: "bottomright" }).addTo(this.map);
+    new L.Control.Zoom({ position: "topleft" }).addTo(this.map);
 
     this.lightBG = L.mapbox
       .styleLayer("mapbox://styles/willcmccusker/cj44oki3u843e2rnx1wyilp8z")
@@ -191,9 +172,6 @@ export default {
     this.destroyGraphs();
   },
   watch: {
-    extentYears: function() {
-      this.loadMapLayers()
-    },
     compositionYear: function() {
       this.loadMapLayers()
     },
@@ -261,7 +239,7 @@ export default {
         // maxZoom: 13
       };
 
-      for (var i = 0; i < 3; i++) {
+      for (var i = 0; i < 4; i++) {
         for (var j = 0; j < i + 1; j++) {
           var bound = j === 0 ? "inner" : j === 1 ? "middle" : "outer";
           var name = "t" + (i + 1) + "_" + bound;
@@ -285,7 +263,7 @@ export default {
         }
       }
       options.opacity = 1;
-      this.addYearLayers(3, options);
+      this.addYearLayers(4, options);
     },
     addLayer (name) {
       if (this.allLayers[name]) {
@@ -348,47 +326,6 @@ export default {
             );
           }
         });
-      } else {
-        var sequence = "";
-        this.years.forEach(year => {
-          sequence += this.extentYears.includes(year)  ? "1" : "0";
-        });
-        layersToAdd = [];
-        switch (sequence) {
-          case "000":
-            break;
-          case "100":
-            layersToAdd.push("extent_t1_inner");
-            break;
-          case "110":
-            layersToAdd.push("extent_t1_inner");
-            layersToAdd.push("extent_t2_middle");
-            break;
-          case "101":
-            layersToAdd.push("extent_t1_inner");
-            layersToAdd.push("extent_t3_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-          case "111":
-            layersToAdd.push("extent_t1_inner");
-            layersToAdd.push("extent_t2_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-          case "010":
-            layersToAdd.push("extent_t2_inner");
-            layersToAdd.push("extent_t2_middle");
-            break;
-          case "011":
-            layersToAdd.push("extent_t2_inner");
-            layersToAdd.push("extent_t2_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-          case "001":
-            layersToAdd.push("extent_t3_inner");
-            layersToAdd.push("extent_t3_middle");
-            layersToAdd.push("extent_t3_outer");
-            break;
-        }
       }
       var layersToRemove = this.getLayers();
       layersToRemove.forEach(layerToRemove => {
