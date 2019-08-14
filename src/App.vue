@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div class="container-fluid">
-        <nav class="navbar navbar-expand fixed-top navbar-light bg-light">
-        <a class="navbar-brand" href="/">Huella Urbana Portoviejo</a>
-        <div v-if='isCity()' class="navbar-nav">
+      <nav class="navbar navbar-expand fixed-top navbar-light bg-light shadow-sm flex-wrap">
+        <a class="navbar-brand order-1" href="/">Huella Urbana Portoviejo</a>
+        <div v-if='isCity()' class="navbar-nav order-1" id="navbarDropdownWrap">
           <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="btn dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ $route.name ? $route.name : 'Seleccione una Base de Datos' }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -20,10 +20,10 @@
             </div>
           </div>
         </div> <!-- End of navbar-nav -->
-        <div class="navbar-nav ml-auto">
+        <div class="navbar-nav ml-auto order-1">
           <div class='nav-item dropdown'>
             <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="navbar-toggler-icon"></span>
+              Menú
             </a>
             <div class='dropdown-menu dropdown-menu-right'>
               <router-link to="/sobre" class="dropdown-item">Sobre el proyecto</router-link>
@@ -36,23 +36,6 @@
           </div>
         </div>
       </nav>
-        <div class="row">
-          <div id="logos" class="table-responsive">
-            <table class="table table-borderless table-light">
-              <tr style="width: 100%">
-                <td style="width:33%" class="text-center">
-                  <img class="align-middle" src="img/caf-logo.png" />
-                </td>
-                <td style="width:33%" class="text-center">
-                  <img class="align-middle" style="max-height: 45px;" src="img/marron-logo.png" />
-                </td>
-                <td style="width:33%" class="text-center">
-                  <img class="align-middle" src="img/portoviejo-logo.png" />
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
       <div v-if='!$route.name' class="row">
         <div class="col-12">
           <div id="city-home" class='row'>
@@ -69,6 +52,29 @@
         </div>
       </div>
       <router-view></router-view>
+      <div class="row">
+        <div id="logos" class="table-responsive border-top" v-bind:class="{ home: !$route.name }">
+          <table class="table table-borderless table-light">
+            <tr style="width: 100%">
+              <td style="width:15%" class="text-center align-middle p1">
+                <img class="align-middle" style="max-height: 40px;" src="img/eu-flag.png" />
+              </td>
+              <td style="width:15%" class="text-center align-middle p1">
+                <img class="align-middle" src="img/afd-logo.png" />
+              </td>
+              <td style="width:22%" class="text-center align-middle p1">
+                <img class="align-middle" src="img/caf-logo.png" />
+              </td>
+              <td style="width:22%" class="text-center align-middle p1">
+                <img class="align-middle" style="max-height: 45px;" src="img/marron-logo.png" />
+              </td>
+              <td style="width:26%" class="text-center align-middle p1">
+                <img class="align-middle" src="img/portoviejo-logo.png" />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -107,8 +113,19 @@ body {
   background: url('/img/portoviejo-lights.png') no-repeat center center fixed;
   background-size: cover;
 }
+#navbarDropdown, #aboutDropdown {
+  color: #5D0E8B;
+}
+#navbarDropdown {
+  border: #5D0E8B 1px solid;
+  border-radius: 2rem;
+  &:hover {
+    background: #5D0E8B;
+    color: #F8F9FA;
+  }
+}
 #city-home {
-  margin-top: 40vh;
+  margin-top: 20vh;
 }
 #city-home .bigNum {
   color: white !important;
@@ -118,18 +135,21 @@ body {
 
 #logos img {
   max-width: 100%;
-  max-height: 60px;
+  max-width: 200px;
+  max-height: 50px;
   width: auto;
 }
 #logos {
-  position: fixed;
-  top: 56px;
   z-index: 100;
-}
-
-@media (max-width: 576px) {
-  #logos {
-    margin-bottom: 25vh;
+  .table {
+    margin: 0;
+    td, th {
+      padding: 5px;
+    }
+  }
+  &.home {
+    position: fixed;
+    bottom: 0;
   }
 }
 .btn-1985, .btn-1998, .btn-2007, .btn-2017{
@@ -176,12 +196,16 @@ body {
   position: absolute;
   top: -1500px;
 }
+.navbar-brand {
+  font-variant: small-caps;
+  font-size: 1rem;
+}
 .navbar-expand .navbar-toggler {
   display: block;
 }
 #infoPage {
   background: white;
-  margin-top: 120px;
+  margin-top: 56px;
   min-height: 100vh;
 }
 #cityData {
@@ -189,12 +213,6 @@ body {
   margin-right: -30px;
   z-index: 3;
   margin-top: 100vh;
-  margin-top: 120px;
-}
-@media (min-width: 992px) {
-  #cityData {
-    margin-top: 120px;
-  }
 }
 .legend-item {
   display: inline-block;
@@ -207,10 +225,47 @@ body {
   padding: 5px;
   font-size: 13px;
   position: fixed;
-  top: 160px;
-  right: 20px;
+  top: 66px;
+  right: 10px;
   width: 210px;
   z-index: 2;
   text-align: left;
+  label {
+    margin-bottom: 0;
+  }
 }
+.map-key-layers {
+  padding-top: 10px;
+}
+@media (max-width: 526px) {
+  #map-key {
+    top: 103px;
+  }
+  #navbarDropdownWrap {
+    order: 2 !important;
+    margin: auto;
+  }
+  .leaflet-top .leaflet-control {
+    margin-top: 48px;
+  }
+}
+@media (min-width: 576px) {
+  #city-home {
+    margin-top: 40vh;
+  }
+}
+@media (min-width: 992px) {
+  #cityData {
+    margin-top: 56px;
+    padding-bottom: 56px;
+  }
+  #logos {
+    position: fixed;
+    bottom: 0;
+  }
+  .leaflet-bottom {
+    bottom: 10px;
+  }
+}
+
 </style>
