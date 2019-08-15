@@ -146,7 +146,11 @@ let charts = function (city) {
       ]
     },
     'arterial_roads': {
-      labels: ['Portoviejo', 'PMD', 'Mundo'],
+      labels: [
+        ['Portoviejo'],
+        ['Países Menos', 'Desarrollados'],
+        ['Mundo']
+      ],
       datasets: [
         {
           label: 'Densidad de las todas Vías',
@@ -157,7 +161,11 @@ let charts = function (city) {
       ]
     },
     'arterial_roads_distance': {
-      labels: ['Portoviejo', 'PMD', 'Mundo'],
+      labels: [
+        ['Portoviejo'],
+        ['Países Menos', 'Desarrollados'],
+        ['Mundo']
+      ],
       datasets: [
         {
           label: 'Ancho',
@@ -174,7 +182,11 @@ let charts = function (city) {
       ]
     },
     'blocks_and_plots_composition_special_stacked': {
-      labels: ['Portoviejo', 'PMD', 'Mundo'],
+      labels: [
+        ['Portoviejo'],
+        ['Países Menos', 'Desarrollados'],
+        ['Mundo']
+      ],
       datasets: [
         {
           suffix: '_atomistic_',
@@ -497,7 +509,7 @@ export let makeChart = function (prefix, city, title, unit = '', multiply = fals
   var suffix1 = side ? '_pre_1990' : '_t1_t2'
   var suffix2 = side ? '_1990_2015' : '_t2_t3'
   var data = {
-    labels: [city.City.name, city.Region.name, 'Mundo'],
+    labels: [city.City.name, 'Países Menos Desarrollados', 'Mundo'],
     datasets: [{
       label: 'Pre 1990',
       backgroundColor: '#FE8B73',
