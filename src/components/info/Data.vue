@@ -25,7 +25,7 @@
                 <a href="WEB_Diccionario_de_Datos.pdf" style="float:right;">pdf</a>
               </li>
             </ul>
-            <p>Otras Estudios</p>
+            <p>Otros Estudios</p>
             <ul>
               <li>
                 <span style="float:left;">TBD</span>

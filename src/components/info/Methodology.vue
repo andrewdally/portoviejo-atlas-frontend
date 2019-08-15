@@ -8,11 +8,15 @@
               <h3 class="mb-3">Metodología</h3>
               <p class="lead">El Estudio de la Huella Urbana divide su análisis en tres fases descritas brevemente a	continuación:</p>
               <p><u>Fase 1:</u> Áreas y Densidades. Centra su análisis en el componente físico de las áreas urbanas sujeto de estudio, sus atributos claves y el cambio de estos en el tiempo. Su objetivo principal es informar a los usuarios, ya sean tomadores de decisiones, funcionarios públicos, académicos, organizaciones ciudadanas o ciudadanos interesados, sobre la cantidad del suelo convertido a uso urbano y su relación con el crecimiento poblacional, así como los atributos claves que resultan de la huella urbana de las ciudades. A saber, densidad, fragmentación y compacidad y sus respectivos cambios en el tiempo. Como lo ilustran los mapas de la Fase 1, las tasas de crecimiento varían de pendiendo las características de cada ciudad.</p>
-              <p><u>Fase 2:</u> Trazados Urbanos y Vías. A través del mapeo de los trazados urbanos en una muestra de ciudades colombianas utilizando imágenes satelitales disponibles abiertamente y de alta resolución en la plataforma Bing, responde las siguientes dos preguntas:</p>
+              <p><u>Fase 2:</u> Trazados Urbanos y Vías. A través del mapeo de los trazados urbanos en Portoviejo utilizando imágenes satelitales disponibles abiertamente y de alta resolución en la plataforma Bing, responde las siguientes dos preguntas:</p>
               <p>
                 <ol>
-                  <li class="mb-2">¿Qué tan bien trazadas están las áreas de expansión (áreas convertidas a uso urbano entre 1990 aprox. y 2016 aprox.) en la muestra de ciudades colombianas?</li>
-                  <li class="mb-2">¿Qué tan bien trazadas están las áreas convertidas a uso urbano antes de 1990 aprox. – llamadas “pre-1990”) comparadas con aquellas desarrolladas en las zonas de expansión de la muestra de ciudades?</li>
+                  <li class="mb-2">
+                    ¿Qué tan bien trazadas están las áreas de expansión (áreas convertidas a uso urbano entre 1990 aprox. y 2016 aprox.) en la ciudad de Portoviejo?
+                  </li>
+                  <li class="mb-2">
+                    ¿Qué tan bien trazadas están las áreas convertidas a uso urbano antes de 1990 aprox. – llamadas “pre-1990”) comparadas con aquellas desarrolladas en las zonas de expansión de Portoviejo?
+                  </li>
                 </ol>
               </p>
 
