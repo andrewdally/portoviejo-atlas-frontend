@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "big.js": "^5.2.2",
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "leaflet": "^1.4.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2"
